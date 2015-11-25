@@ -13,5 +13,13 @@ public class MainActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+		TextView mainT = (TextView) findViewById(R.id.maint);
+		Player demo = new Player();
+		mainT.setText(demo.getSaveString());
+		
+		Player demo2 = new Player(demo.getSaveString());
+		demo2.addCasualty("Test");
+		mainT.setText(demo2.undoLast());
+		
     }
 }

@@ -1,5 +1,6 @@
 package com.scatterlogic.apps.bbaccelerate;
 import java.util.*;
+import android.util.Log;
 
 public class Player
 {
@@ -53,6 +54,7 @@ public class Player
 		value = 0;
 		
 		saveString = "";
+		Log.d("Player()", "New player made: " + starPlayerPoints + " SPPs.");
 	}
 	public Player(String inSaveString){
 		this();
@@ -64,7 +66,7 @@ public class Player
 	{
 		intercepts++;
 		addNote("Interception",detail);
-		starPlayerPoints =+ 2;
+		starPlayerPoints += 2;
 	}
 
 	public int getIntercepts() {return intercepts;}
@@ -92,6 +94,7 @@ public class Player
 		casualties++;
 		addNote("Casualty",detail);
 		starPlayerPoints += 2;
+		Log.d("Player()", "Casualty: " + starPlayerPoints + " SPPs.");
 	}
 
 	public int getCasualties()
@@ -123,6 +126,8 @@ public class Player
 		history.add(Title); 
 		history.add(Content);
 		history.add("" + System.currentTimeMillis());
+
+		Log.d("Player()", "In addNote (" + Title + "): " + history.size() + " sized history. " + starPlayerPoints + "SPPs");
 	}
 	private void makeSaveString(){
 		saveString = "";
@@ -197,30 +202,56 @@ public class Player
 		return output;
 	}
 	public String undoLast(){
-		String lastTime = history.get(history.size()-1);
-		history.remove(history.size()-1);
-		
-		String lastContent = history.get(history.size()-1);
-		history.remove(history.size()-1);
 
-		String lastTitle = history.get(history.size()-1);
-		history.remove(history.size()-1);
-		
-		switch (lastTitle){
-			case "Intercept":
-				starPlayerPoints -=2;
-			case "Completion":
-				starPlayerPoints -=1;
-			case "Casualty":		
-				starPlayerPoints -=2;
-			case "Kill":
-				starPlayerPoints -=2;
-			case "Touchdown":
-				starPlayerPoints -=3;
-			case "MVP":
-				starPlayerPoints -=5;
+		Log.d("Player()", "In undo: " + history.size() + " sized history. " + starPlayerPoints + "SPPs");
+		if (history.size() >=3){
+			String lastTime = history.get(history.size()-1);
+			history.remove(history.size()-1);
+			
+			String lastContent = history.get(history.size()-1);
+			history.remove(history.size()-1);
+	
+			String lastTitle = history.get(history.size()-1);
+			history.remove(history.size()-1);
+			Log.d("Player()", "In undo. Just removed " + lastTitle + ", " + lastContent + ".");
+			switch (lastTitle){
+				case "Interception":
+					starPlayerPoints -=2;
+					break;
+				case "Completion":
+					starPlayerPoints -=1;
+					break;
+				case "Casualty":		
+					starPlayerPoints -=2;
+					break;
+				case "Kill":
+					starPlayerPoints -=2;
+					break;
+				case "Touchdown":
+					starPlayerPoints -=3;
+					break;
+				case "MVP":
+					starPlayerPoints -=5;
+					break;
+				default:
+					Log.d("Undo in Player","No SPPs removed for " +lastTitle+ ": " + lastContent);
+			}
+			return lastTitle + " " + starPlayerPoints + "SPPs";
+		}else{
+			Log.d("Undo in Player", "Nothing to undo! History size is " + history.size());
+			return "Nothing to undo!";
 		}
-		return lastTitle + " " + starPlayerPoints + "SPPs";
-				
+	}
+	public String getName(){
+		return playerName;
+	}
+	public void setName(String name){
+		playerName = name;
+	}
+	public int getNumber(){
+		return playerNumber;
+	}
+	public void setNumber(int pNumber){
+		playerNumber = pNumber;
 	}
 }

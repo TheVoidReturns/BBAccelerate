@@ -42,6 +42,10 @@ public class Team
 		}
 		saveString = "";
 	}
+	public Team(String saveString){
+		this();
+		FromSaveString(saveString);
+	}
 
 	public void setTeamName(String teamName)
 	{
@@ -147,7 +151,9 @@ public class Team
 	{
 		return teamMembers;
 	}
-
+	public Player getPlayer(int playerNo){
+		return teamMembers.get(playerNo-1);
+	}
 	public void setSaveString(String saveString)
 	{
 		this.saveString = saveString;
@@ -174,11 +180,27 @@ public class Team
 		for (int i = 0; i<=15; i++){
 			addItemToSave(teamMembers.get(i).getSaveString());
 		}
-
-		ArrayList <Player> teamMembers;
 		
 	}
 	private void addItemToSave(String thingToAdd){
 		saveString = saveString + thingToAdd + TEAM_DELIMITER;
+	}
+	private void FromSaveString(String inString){
+		String [] teamElements = inString.split(TEAM_DELIMITER);
+		teamName = teamElements[0];
+		race = teamElements[1];
+		headCoach= teamElements[2];
+		gold = Long.parseLong(teamElements[3]);
+		teamValue = Long.parseLong(teamElements[4]);
+		rerolls = Integer.parseInt(teamElements[5]);
+		fanFactor = Integer.parseInt(teamElements[6]);
+		cheerLeaders = Integer.parseInt(teamElements[7]);
+		assistantCoaches = Integer.parseInt(teamElements[8]);
+		apothecaries= Integer.parseInt(teamElements[9]);
+
+		for (int i = 10; i<=25; i++){
+			teamMembers.add(new Player(teamElements[i]));
+		}
+		this.saveString = saveString;
 	}
 }

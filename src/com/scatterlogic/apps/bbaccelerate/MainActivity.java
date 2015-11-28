@@ -12,9 +12,12 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-		TextView mainT = (TextView) findViewById(R.id.maint);
+        setContentView(R.layout.playercard);
+		TextView mainT = (TextView) findViewById(R.id.playername);
 		Team demo = new Team();
-		mainT.setText(demo.getSaveString());
+
+		demo.getPlayer(1).setName("Robin");
+		mainT.setText(demo.getPlayer(1).getName());
+		
     }
 }

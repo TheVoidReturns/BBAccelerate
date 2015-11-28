@@ -59,7 +59,86 @@ public class Player
 	public Player(String inSaveString){
 		this();
 		FromSaveString(inSaveString);
-		saveString = inSaveString;
+	}
+
+	public void setPlayerNumber(int playerNumber)
+	{
+		this.playerNumber = playerNumber;
+	}
+
+	public int getPlayerNumber()
+	{
+		return playerNumber;
+	}
+
+	public void setPlayerName(String playerName)
+	{
+		this.playerName = playerName;
+	}
+
+	public String getPlayerName()
+	{
+		return playerName;
+	}
+
+	public void setPlayerType(String playerType)
+	{
+		this.playerType = playerType;
+	}
+
+	public String getPlayerType()
+	{
+		return playerType;
+	}
+
+	public void setIsStarPlayer(boolean isStarPlayer)
+	{
+		this.isStarPlayer = isStarPlayer;
+	}
+
+	public boolean isStarPlayer()
+	{
+		return isStarPlayer;
+	}
+
+	public void setMA(short mA)
+	{
+		MA = mA;
+	}
+
+	public short getMA()
+	{
+		return MA;
+	}
+
+	public void setST(short sT)
+	{
+		ST = sT;
+	}
+
+	public short getST()
+	{
+		return ST;
+	}
+
+	public void setAG(short aG)
+	{
+		AG = aG;
+	}
+
+	public short getAG()
+	{
+		return AG;
+	}
+
+	public void setAV(short aV)
+	{
+		AV = aV;
+	}
+
+	public short getAV()
+	{
+		return AV;
 	}
 
 	public void addIntercept(String detail)
@@ -190,6 +269,7 @@ public class Player
 		mvps = Integer.parseInt(elementOfString[17]);
 		starPlayerPoints = Integer.parseInt(elementOfString[18]);
 		value = Long.parseLong(elementOfString[19]);
+		saveString = inString;
 	}
 	private void addItemToSave(String thingToAdd){
 		saveString = saveString + thingToAdd + NEXT_LINE;
@@ -233,6 +313,42 @@ public class Player
 				case "MVP":
 					starPlayerPoints -=5;
 					break;
+				case "Skill Up":
+					skills.remove(lastContent);
+					if (lastContent.contains("Stat Increase:")){
+						switch (lastContent.split(":")[1]){
+							case "MA":
+								MA--;
+								break;
+							case "ST":
+								ST--;
+								break;
+							case "AG":
+								AG--;
+								break;
+							case "AV":
+								AV--;
+								break;
+						}
+					}
+					if (lastContent.contains("Stat Decrease:")){
+						switch (lastContent.split(":")[1]){
+							case "MA":
+								MA++;
+								break;
+							case "ST":
+								ST++;
+								break;
+							case "AG":
+								AG++;
+								break;
+							case "AV":
+								AV++;
+								break;
+						}
+					}
+					break;
+					
 				default:
 					Log.d("Undo in Player","No SPPs removed for " +lastTitle+ ": " + lastContent);
 			}
@@ -253,5 +369,43 @@ public class Player
 	}
 	public void setNumber(int pNumber){
 		playerNumber = pNumber;
+	}
+	public boolean hasSkill(String skill){
+		return skills.contains(skill);
+	}
+	public void addSkill(String skill){
+		if (skill.contains("Stat Increase:")){
+			switch (skill.split(":")[1]){
+				case "MA":
+					MA++;
+					break;
+				case "ST":
+					ST++;
+					break;
+				case "AG":
+					AG++;
+					break;
+				case "AV":
+					AV++;
+					break;
+			}
+		}
+		if (skill.contains("Stat Decrease:")){
+			switch (skill.split(":")[1]){
+				case "MA":
+					MA--;
+					break;
+				case "ST":
+					ST--;
+					break;
+				case "AG":
+					AG--;
+					break;
+				case "AV":
+					AV--;
+					break;
+			}
+		}
+		addNote("Skill Up", skill);
 	}
 }

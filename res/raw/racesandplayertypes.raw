@@ -1,0 +1,189 @@
+Index,Player Type/name,MA,ST,AG,AV,Skills,Cost,Race/type,nr.,General,Agility,Passing,Strength,Mutation,Qty
+1,Amazon Linewoman,6,3,3,7,Dodge,"50,000",Amazon 1,20,30,30,30,x,16
+2,Amazon Thrower,6,3,3,7,"Dodge, Pass","70,000",Amazon 2,20,30,20,30,x,2
+3,Amazon Catcher,6,3,3,7,"Dodge, Catch","70,000",Amazon 3,20,20,30,30,x,2
+4,Amazon Blitzer,6,3,3,7,"Dodge, Block","90,000",Amazon 4,20,30,30,20,x,4
+5,Amazon Journeywoman,6,3,3,7,"Loner, Dodge","50,000",Amazon 5,x,x,x,x,x,11
+6,Beastman,6,3,3,8,Horns,"60,000",Chaos 1,20,30,30,20,20,16
+7,Chaos Warrior,5,4,3,9,,"100,000",Chaos 2,20,30,30,20,20,4
+8,Chaos Minotaur,5,5,2,8,"Loner, Frenzy, Horns, Mighty Blow, Thick Skull, Wild Animal","150,000",Chaos 3,30,30,30,20,20,1
+9,Chaos Journeyman,6,3,3,8,"Loner, Horns","60,000",Chaos 4,x,x,x,x,x,11
+10,Hobgoblin,6,3,3,7,,"40,000",Chaos Dwarf 1,20,30,30,30,x,16
+11,Chaos Dwarf Blocker,4,3,2,9,"Thick Skull,  Block,  Tackle","70,000",Chaos Dwarf 2,20,30,30,20,30,6
+12,Bull Centaur,6,4,2,9,"Sprint, Sure Feet, Thick Skull","130,000",Chaos Dwarf 3,20,30,30,20,x,2
+13,Minotaur ,5,5,2,8,"Loner, Frenzy, Horns, Mighty Blow, Thick Skull, Wild Animal","150,000",Chaos Dwarf 4,30,30,30,20,30,1
+14,Hobgoblin Journeyman,6,3,3,7,Loner,"40,000",Chaos Dwarf 5,x,x,x,x,x,11
+15,Dark Elf Lineman,6,3,4,8,,"70,000",Dark Elf 1,20,20,30,30,x,16
+16,Dark Elf Runner,7,3,4,7,Dump-off,"80,000",Dark Elf 2,20,20,20,30,x,2
+17,Dark Elf Assassin,6,3,4,7,"Shadowing, Stab","90,000",Dark Elf 3,20,20,30,30,x,2
+18,Dark Elf Blitzer,7,3,4,8,Block,"100,000",Dark Elf 4,20,20,30,30,x,4
+19,Witch Elf,7,3,4,7,"Dodge,  Frenzy,  Jump Up","110,000",Dark Elf 5,20,20,30,30,x,2
+20,Dark Elf Journeyman,6,3,4,8,Loner,"70,000",Dark Elf 6,x,x,x,x,x,11
+21,Dwarf Blocker,4,3,2,9,"Thick Skull,  Block,  Tackle","70,000",Dwarf 1,20,30,30,20,x,16
+22,Dwarf Runner,6,3,3,8,"Thick Skull,  Sure Hands","80,000",Dwarf 2,20,30,20,30,x,2
+23,Dwarf Blitzer,5,3,3,9,"Thick Skull,  Block","80,000",Dwarf 3,20,30,30,20,x,2
+24,Troll Slayer,5,3,2,8,"Thick Skull,  Block,  Frenzy,  Dauntless","90,000",Dwarf 4,20,30,30,20,x,2
+25,Deathroller,4,7,1,10,"Loner, Br.Tckl, Dirty P., Juggernaut, Mght.B., No Hands, Secret Weapon, Stand Firm","160,000",Dwarf 5,30,30,30,20,x,1
+26,Dwarf Journeyman,4,3,2,9,"Loner, Thick Skull,  Block,  Tackle","70,000",Dwarf 6,x,x,x,x,x,11
+27,Elf Lineman,6,3,4,7,,"60,000",Elf 1,20,20,30,30,x,16
+28,Elf Thrower,6,3,4,7,Pass,"70,000",Elf 2,20,20,20,30,x,2
+29,Elf Catcher,8,3,4,7,"Catch, Nerves of Steel","100,000",Elf 3,20,20,30,30,x,4
+30,Elf Blitzer,7,3,4,8,"Block, Side Step","110,000",Elf 4,20,20,30,30,x,2
+31,Elf Journeyman,6,3,4,7,Loner,"60,000",Elf 5,x,x,x,x,x,11
+32,Goblin,6,2,3,7,"Right Stuff,  Dodge,  Stunty","40,000",Goblin 1,30,20,30,30,x,16
+33,Bombardier,6,2,3,7,"Bombardier, Dodge, Secret Weapon, Stunty","40,000",Goblin 2,30,20,30,30,x,1
+34,Pogoer,7,2,3,7,"Dodge, Leap, Stunty, Very Long Legs","70,000",Goblin 3,30,20,30,30,x,1
+35,Looney,6,2,3,7,"Chainsaw, Secret, Weapon, Stunty","40,000",Goblin 4,30,20,30,30,x,1
+36,Fanatic ,3,7,3,7,"Ball & Chain, No Hands, Secret Weapon, Stunty","70,000",Goblin 5,30,30,30,20,x,1
+37,Troll ,4,5,1,9,"Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate","110,000",Goblin 6,30,30,30,20,x,2
+38,Goblin Journeyman,6,2,3,7,"Loner, Right Stuff,  Dodge,  Stunty","40,000",Goblin 7,x,x,x,x,x,11
+39,Halfling,5,2,3,6,"Right Stuff,  Dodge,  Stunty","30,000",Hafling 1,30,20,30,30,x,16
+40,Treeman ,2,6,1,10,"Mght.B, Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-Mate","120,000",Hafling 2,30,30,30,20,x,2
+41,Halfling Journeyman,5,2,3,6,"Loner, Right Stuff,  Dodge,  Stunty","30,000",Halfling 3,x,x,x,x,x,11
+42,High Elf Lineman,6,3,4,8,,"70,000",High Elf 1,20,20,30,30,x,16
+43,High Elf Thrower,6,3,4,8,"Pass, Safe Throw","90,000",High Elf 2,20,20,20,30,x,2
+44,High Elf Catcher,8,3,4,7,Catch,"90,000",High Elf 3,20,20,30,30,x,4
+45,High Elf Blitzer,7,3,4,8,Block,"100,000",High Elf 4,20,20,30,30,x,2
+46,High Elf Journeyman,6,3,4,8,Loner,"70,000",High Elf 5,x,x,x,x,x,11
+47,Human Lineman,6,3,3,8,,"50,000",Human 1,20,30,30,30,x,16
+48,Human Catcher,8,2,3,7,"Catch,  Dodge,","70,000",Human 2,20,20,30,30,x,4
+49,Human Thrower,6,3,3,8,"Pass,  Sure Hands","70,000",Human 3,20,30,20,30,x,2
+50,Human Blitzer,7,3,3,8,"Block,  ","90,000",Human 4,20,30,30,20,x,4
+51,Ogre,5,5,2,9,"Loner, Mighty Blow, Thick Skull, Throw Team-Mate, Bonehead","140,000",Human 5,30,30,30,20,x,1
+52,Human Journeyman,6,3,3,8,Loner,"50,000",Human 6,x,x,x,x,x,11
+53,Khemri Skeleton,5,3,2,7,"Regeneration, Thick Skull","40,000",Khemri 1,20,30,30,30,x,16
+54,Thro-Ra,6,3,2,7,"Regeneration, Sure Hands, Pass","70,000",Khemri 2,20,30,20,30,x,2
+55,Blitz-Ra,6,3,2,8,"Regeneration, Block","90,000",Khemri 3,20,30,30,20,x,2
+56,Tomb Guardian,4,5,1,9,"Regeneration, Decay","100,000",Khemri 4,30,30,30,20,x,4
+57,Khemri Skeleton Journeyman,5,3,2,7,"Loner, Regeneration, Thick Skull","40,000",Khemri 5,x,x,x,x,x,11
+58,Skink,8,2,3,7,"Dodge, Stunty","60,000",Lizard 1,30,20,30,30,x,16
+59,Saurus,6,4,1,9,,"80,000",Lizard 2,20,30,30,20,x,6
+60,Kroxigor,6,5,1,9,"Loner, Prehensile Tail, Thick Skull, Bonehead, Mighty Blow","140,000",Lizard 3,30,30,30,20,x,1
+61,Skink Journeyman,8,2,3,7,"Loner, Dodge, Stunty","60,000",Lizard 4,x,x,x,x,x,11
+62,Necromantic Zombie,4,3,2,8,Regeneration,"40,000",Necromantic 1,20,30,30,30,x,16
+63,Necromantic Ghoul,7,3,3,7,Dodge,"70,000",Necromantic 2,20,20,30,30,x,2
+64,Necromantic Wight,6,3,3,8,"Regeneration,  Block","90,000",Necromantic 3,20,30,30,20,x,2
+65,Flesh Golem,4,4,2,9,"Stand Firm, Regeneration, Thick Skull","110,000",Necromantic 4,20,30,30,20,x,2
+66,Werewolf,8,3,3,8,"Frenzy, Claws, Regeneration","120,000",Necromantic 5,20,20,30,30,x,2
+67,Necromantic Zombie Journeyman,4,3,2,8,"Loner, Regeneration","40,000",Necromantic 6,x,x,x,x,x,11
+68,Norse Lineman,6,3,3,7,"Block,","50,000",Norse 1,20,30,30,30,x,16
+69,Norse Thrower,6,3,3,7,"Block,  Pass","70,000",Norse 2,20,30,20,30,x,2
+70,Norse Runner,7,3,3,7,"Block,  Dauntless","90,000",Norse 3,20,20,30,30,x,2
+71,Norse Beserker,6,3,3,7,"Block,  Frenzy,  Jump Up","90,000",Norse 4,20,30,30,20,x,2
+72,Ulfwerener,6,4,2,8,Frenzy,"110,000",Norse 5,20,30,30,20,x,2
+73,Snow Troll,5,5,1,8,"Loner, Claws, Disturbing Presence, Frenzy, Wild Animal","140,000",Norse 6,30,30,30,20,x,1
+74,Norse Journeyman,6,3,3,7,"Loner, Block","50,000",Norse 7,x,x,x,x,x,11
+75,Rotter,5,3,3,8,"Decay, Nurgle’s Rot","40,000",Nurgle 1,20,30,30,30,20,16
+76,Pestigors,6,3,3,8,"Horns, Nurgle’s Rot, Regeneration","80,000",Nurgle 2,20,30,30,20,20,4
+77,Nurgle Warriors,4,4,2,9,"Disturbing Presence, Foul Appearance, Nurgle’s Rot, Regeneration,","110,000",Nurgle 3,20,30,30,20,20,4
+78,Beast of Nurgle,4,5,1,9,"Loner, Dist. Pres., Mght.B., Nurgle’s Rot, Foul App., Really St., Regener., Tentacles,","140,000",Nurgle 4,30,30,30,20,20,1
+79,Nurgle Journeyman,5,3,3,8,"Loner, Decay, Nurgle’s Rot,","40,000",Nurgle 5,x,x,x,x,x,11
+80,Snotling,5,1,3,5,"Dodge, Right Stuff, Side Step, Stunty, Titchy,","20,000",Ogre 1,30,20,30,30,x,16
+81,Ogre ,5,5,2,9,"Mighty Blow, Thick Skull, Throw Team-Mate, Bonehead","140,000",Ogre 2,30,30,30,20,x,6
+82,Snotling Journeyman,5,1,3,5,"Loner, Dodge, Right Stuff, Side Step, Stunty, Titchy","20,000",Ogre 3,x,x,x,x,x,11
+83,Orc Lineman,5,3,3,9,,"50,000",Orc 1,20,30,30,30,x,16
+84,Goblin ,6,2,3,7,"Right Stuff,  Dodge,  Stunty","40,000",Orc 2,30,20,30,30,x,4
+85,Orc Thrower,5,3,3,8,"Pass,  Sure Hands","70,000",Orc 3,20,30,20,30,x,2
+86,Black Orc,4,4,2,9,,"80,000",Orc 4,20,30,30,20,x,4
+87,Orc Blitzer,6,3,3,9,Block,"80,000",Orc 5,20,30,30,20,x,4
+88,Troll,4,5,1,9,"Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate","110,000",Orc 6,30,30,30,20,x,1
+89,Orc Journeyman,5,3,3,9,Loner,"50,000",Orc 7,x,x,x,x,x,11
+90,Skaven Lineman,7,3,3,7,,"50,000",Skaven 1,20,30,30,30,30,16
+91,Skaven Thrower,7,3,3,7,"Pass,  Sure Hands","70,000",Skaven 2,20,30,20,30,30,2
+92,Gutter Runner,9,2,4,7,Dodge,"80,000",Skaven 3,20,20,30,30,30,4
+93,Skaven Blitzer,7,3,3,8,Block,"90,000",Skaven 4,20,30,30,20,30,2
+94,Rat Ogre,6,5,2,8,"Loner, Mighty Blow, Prehensile Tail, Wild Animal, Frenzy","150,000",Skaven 5,30,30,30,20,30,1
+95,Skaven Journeyman,7,3,3,7,Loner,"50,000",Skaven 6,x,x,x,x,x,11
+96,Undead Skeleton,5,3,2,7,"Regeneration, Thick Skull","40,000",Undead 1,20,30,30,30,x,16
+97,Undead Zombie,4,3,2,8,Regeneration,"40,000",Undead 2,20,30,30,30,x,16
+98,Undead Ghoul,7,3,3,7,Dodge,"70,000",Undead 3,20,20,30,30,x,4
+99,Undead Wight,6,3,3,8,"Regeneration,  Block","90,000",Undead 4,20,30,30,20,x,2
+100,Undead Mummy,3,5,1,9,"Regeneration,  Mighty Blow","120,000",Undead 5,30,30,30,20,x,2
+101,Undead Skeleton Journeyman,5,3,2,7,"Loner, Regeneration, Thick Skull","40,000",Undead 6,x,x,x,x,x,11
+102,Undead Zombie Journeyman,4,3,2,8,"Loner, Regeneration","40,000",Undead 7,x,x,x,x,x,11
+103,Thrall,6,3,3,7,,"40,000",Vampire 1,20,30,30,30,x,16
+104,Vampire,6,4,4,8,"Hypnotic Gaze, Regeneration, Blood Lust","110,000",Vampire 2,20,20,30,20,x,6
+105,Thrall Journeyman,6,3,3,7,Loner,"40,000",Vampire 3,x,x,x,x,x,11
+106,Wood Elf Lineman,7,3,4,7,,"70,000",Wood Elf 1,20,20,30,30,x,16
+107,Wood Elf Thrower,7,3,4,7,Pass,"90,000",Wood Elf 2,20,20,20,30,x,2
+108,Wood Elf Catcher,8,2,4,7,"Catch,  Dodge, Sprint","90,000",Wood Elf 3,20,20,30,30,x,4
+109,Wardancer,8,3,4,7,"Block,  Dodge,  Leap","120,000",Wood Elf 4,20,20,30,30,x,2
+110,Treeman,2,6,1,10,"Loner, Mght.B, Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-Mate","120,000",Wood Elf 5,30,30,30,20,x,1
+111,Wood Elf Journeyman,7,3,4,7,Loner,"70,000",Wood Elf 6,x,x,x,x,x,11
+112,Marauder,6,3,3,8,,"50,000",Chaos Pact 1,20,30,20,20,20,12
+113,Goblin Renegade,6,2,3,7,"Animosity, Dodge, Right Stuff, Stunty","40,000",Chaos Pact 2,30,20,30,30,20,1
+114,Skaven Renegade,7,3,3,7,Animosity,"50,000",Chaos Pact 3,20,30,30,30,20,1
+115,Dark Elf Renegade,6,3,4,8,Animosity,"70,000",Chaos Pact 4,20,20,30,30,20,1
+116,Chaos Troll,4,5,1,9,"Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate","110,000",Chaos Pact 5,30,30,30,20,30,1
+117,Chaos Ogre,5,5,2,9,"Loner, Bone-head, Mighty Blow, Thick Skull, Throw Team-mate","140,000",Chaos Pact 6,30,30,30,20,30,1
+118,Minotaur,5,5,2,8,"Loner, Frenzy, Horns, Mighty Blow, Thick Skull, Wild Animal","150,000",Chaos Pact 7,30,30,30,20,30,1
+119,Marauder journeyman,6,3,3,8,Loner,"50,000",Chaos Pact 8,x,x,x,x,x,11
+120,Slann Lineman,6,3,3,8,"Leap, Very Long Legs","60,000",Slann 1,20,30,30,30,x,16
+121,Slann Catcher,7,2,4,7,"Diving Catch, Leap, Very Long Legs","80,000",Slann 2,20,20,30,30,x,4
+122,Slann Blitzer,7,3,3,8,"Diving Tackle, Jump Up, Leap, Very Long Legs","110,000",Slann 3,20,20,30,20,x,4
+123,Kroxigor,6,5,1,9,"Loner, Bone-head, Mighty Blow, Thick Skull, Prehensile Tail","140,000",Slann 4,30,30,30,20,x,1
+124,Slann journeyman,6,3,3,8,"Loner, Leap, Very Long Legs","60,000",Slann 5,x,x,x,x,x,11
+125,Underworld Goblin,6,2,3,7,"Right Stuff,  Dodge,  Stunty","40,000",Underworld 1,30,20,30,30,20,12
+126,Underworld Skaven Lineman,7,3,3,7,Animosity,"50,000",Underworld 2,20,30,30,30,20,2
+127,Underworld Skaven Thrower,7,3,3,7,"Animosity, Pass, Sure Hands","70,000",Underworld 3,20,30,20,30,20,2
+128,Underworld Skaven Blitzer,7,3,3,8,"Animosity, Block","90,000",Underworld 4,20,30,30,20,20,2
+129,Warpstone Troll,4,5,1,9,"Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate","110,000",Underworld 5,30,30,30,20,20,1
+130,Underworld journeyman,6,2,3,7,"Loner, Right Stuff,  Dodge,  Stunty","40,000",Underworld 6,x,x,x,x,x,11
+131,*Barik Farblast,6,3,3,8,"Loner, Hail Mary Pass, Pass, S.Weapon, Strong Arm, Sure Hands, Thick Skull","60,000",z Star 01,,,,,,1
+132,*Bertha Bigfist,6,5,2,9,"Loner, Bone-head, Break Tackle, Dodge, Mighty Blow, Thick Skull, Throw Team-mate","290,000",z Star 02,,,,,,1
+133,*Bomber Dribblesnot,6,2,3,7,"Loner, Accurate, Bombardier, Dodge, Right Stuff, Secret Weapon, Stunty","60,000",z Star 03,,,,,,1
+134,*Boomer Eziasson,4,3,2,9,"Loner, Accurate, Block, Bombardier, Secret Weapon, Thick Skull","60,000",z Star 04,,,,,,1
+135,*Brick Far’th & Grotty,5 6,5 2,2 3,9 7,"Loner, Bone-h., M.B., Strong Arm, Nerves of St., Thick Sk., T. T.-M. -- Loner, Dodge, Right St., Stunty","290,000",z Star 05,,,,,,1
+136,*Count Luthor,6,5,4,9,"Loner, Regeneration, Block, Side Step, Hypnotic Gaze","390,000",z Star 06,,,,,,1
+137,*Crazy Igor,6,3,3,8,"Loner, Dauntless, Regeneration, Thick Skull (can bitten like a thrall)","120,000",z Star 07,,,,,,1
+138,*Deeproot Strongbranch,2,7,1,10,"Loner, Block, Thick Skull, Mighty Blow, Stand Firm, Throw Team-mate, Strong Arm","300,000",z Star 08,,,,,,1
+139,*Dolfar Longstride,7,3,4,7,"Loner, Diving Catch, Hail Mary Pass, Kick-off Return, Pass Block","150,000",z Star 09,,,,,,1
+140,*Eldril Sidewinder,8,3,4,7,"Loner, Catch, Dodge, Hypnotic Gaze, Nerves of Steel, Pass Block","200,000",z Star 10,,,,,,1
+141,*Fezglitch,4,7,3,7,"Loner, Ball & Chain, Disturbing Presence, Foul Appearance, No Hands, Secret Weapon","100,000",z Star 11,,,,,,1
+142,*Flint Churnblade,5,3,2,8,"Loner, Block, Chainsaw, Secret Weapon, Thick Skull","130,000",z Star 12,,,,,,1
+143,*Fungus the Loon,4,7,3,7,"Loner, Ball & Chain, Mighty Blow, No Hands, Secret Weapon, Stunty","80,000",z Star 13,,,,,,1
+144,*Glart Smashrib Jr.,7,4,3,8,"Loner, Block, Claw, Juggernaut","210,000",z Star 14,,,,,,1
+145,*Grashnak Blackhoof,6,6,2,8,"Loner, Frenzy, Thick Skull, Horns, Mighty Blow","310,000",z Star 15,,,,,,1
+146,*Griff Oberwald,8,4,4,8,"Loner, Block, Dodge, Frend, Sprint, Sure Feet","320,000",z Star 16,,,,,,1
+147,*Grim Ironjaw,5,4,3,8,"Loner, Thick Skull, Block, Multiple Block, Frenzy, Dauntless","220,000",z Star 17,,,,,,1
+148,*Grotty,6,2,4,7,"Loner, Dodge, Right Stuff, Stunty. Always has to be hired along with Brick Far'th","145,000",z Star 18,,,,,,1
+149,*Hack Enslash ,6,3,2,7,"Loner, Chainsaw, Regeneration, Secret Weapon, Side Step","120,000",z Star 19,,,,,,1
+150,*Hakflem Skuttlespike,9,3,4,7,"Loner, Dodge, Prehensile Tail, Extra Arms, Two Heads","200,000",z Star 20,,,,,,1
+151,*Headsplitter,6,6,3,8,"Loner, Mighty Blow, Prehensile Tail","340,000",z Star 21,,,,,,1
+152,*Helmut Wulf ,6,3,3,8,"Loner, Chainsaw, Secret Weapon, Stand Firm","110,000",z Star 22,,,,,,1
+153,*Hemlock ,8,2,3,7,"Loner, Block, Dodge, Side Step, Jump Up, Stab, Stunty","170,000",z Star 23,,,,,,1
+154,*Horkon Heartripper,7,3,4,7,"Loner, Dodge, Leap, Multiple Block, Shadowing, Stab","210,000",z Star 24,,,,,,1
+155,*Hthark the Unstoppable,6,5,2,9,"Loner, Block, Break Tackle, Juggernaut, Sprint, Sure Feet, Thick Skull","330,000",z Star 25,,,,,,1
+156,*Hubris Rakarth ,7,4,4,8,"Loner, Block, Dirty Player, Jump Up, Mighty Blow, Strip Ball","260,000",z Star 26,,,,,,1
+157,*Humerus Carpal,7,2,3,7,"Loner, Catch, Dodge, Regeneration, Nerves of Steel","130,000",z Star 27,,,,,,1
+158,*Icepelt Hammerblow ,5,6,1,8,"Loner, Claws, Disturbing Presence, Frenzy, Regeneration, Thick Skull","330,000",z Star 28,,,,,,1
+159,*Ithaca Benoin,7,3,3,7,"Loner, Accurate, Dump Off, Nerves of Steel, Pass, Regeneration, Sure Hands","220,000",z Star 29,,,,,,1
+160,*J Earlice,8,3,3,7,"Loner, Catch, Diving Catch, Dodge, Sprint","180,000",z Star 30,,,,,,1
+161,*Jordell Freshbreeze,8,3,5,7,"Loner, Block, Dodge, Leap, Diving Catch, Side Step","260,000",z Star 31,,,,,,1
+162,*Lewdgrip Whiparm,6,3,3,9,"Loner, Pass, Strong Arm, Sure Hands, Tentacles","150,000",z Star 32,,,,,,1
+163,*Lord Borak,5,5,3,9,"Loner, Block, Mighty Blow, Dirty Player,","300,000",z Star 33,,,,,,1
+164,*LottaBottol,8,3,3,8,"Loner, Catch, Diving Tackle, Jump Up, Leap, Pass Block, Shadowing, Very Long Legs","220,000",z Star 34,,,,,,1
+165,*Mad Max,6,3,3,8,"Loner, Dauntless, Regeneration, Thick Skull","130,000",z Star 35,,,,,,1
+166,*Max Spleenripper ,5,4,3,8,"Loner, Chainsaw, Secret Weapon","130,000",z Star 36,,,,,,1
+167,*Mighty Zug,4,5,2,9,"Loner, Block, Mighty Blow","260,000",z Star 37,,,,,,1
+168,*Morg 'n' Thorg,6,6,3,10,"Loner, Block, Mighty Blow, Thick Skull, Throw Team-mate","430,000",z Star 38,,,,,,1
+169,*Nobbla Blackwart,6,2,3,7,"Loner, Block, Dodge, Chainsaw, Secret Weapon, Stunty","130,000",z Star 39,,,,,,1
+170,*Prince Moranion,7,4,4,8,"Loner, Block, Dauntless, Tackle, Wrestle","230,000",z Star 40,,,,,,1
+171,*Puggy Baconbreath ,5,3,3,6,"Loner, Block, Dodge, Nerves of Steel, Right Stuff, Stunty","140,000",z Star 41,,,,,,1
+172,*Quetzal Leap,8,2,4,7,"Loner, Catch, Diving Catch, Fend, Kick-off Return, Leap, Nerves of Steel, Very Long Legs","250,000",z Star 42,,,,,,1
+173,*Ramtut III,5,6,1,9,"Loner, Break Tackle, Mighty Blow, Regeneration, Wrestle","380,000",z star 43,,,,,,1
+174,*Rashnak Backstabber ,7,3,3,7,"Loner, Dodge, Side Step, Sneaky Git, Stab","200,000",z star 44,,,,,,1
+175,*Ripper  ,4,6,1,9,"Loner, Grab, Mighty Blow, Throw Team-mate, Regeneration","270,000",z star 45,,,,,,1
+176,*Roxanna Darknail,8,3,5,7,"Loner, Dodge, Frenzy, Jump Up, Juggernaut, Leap","250,000",z star 46,,,,,,1
+177,*Scrappa Sorehead,7,2,3,7,"Loner, D.Player, Dodge, Leap, R.Stuff, Very L.Legs, Sprint, Stunty, S.Feet","150,000",z star 47,,,,,,1
+178,*Setekh ,6,4,2,8,"Loner, Block, Break Tackle, Juggernaut, Regeneration, Strip Ball","220,000",z star 48,,,,,,1
+179,*Sinnedbad,6,3,2,7,"Loner, Block, Jump Up, Pass Block, Regeneration, Secret Weapon, Side Step, Stab","80,000",z star 49,,,,,,1
+180,*Skitter Stab-Stab ,9,2,4,7,"Loner, Dodge, Prehensile Tail, Shadowing, Stab","160,000",z star 50,,,,,,1
+181,*Slibli,7,4,1,9,"Loner, Block, Grab, Guard, Stand Firm","250,000",z star 51,,,,,,1
+182,*Soaren Hightower,6,3,4,8,"Loner, Fend, Kick-off Return, Pass, Safe Throw, Sure Hands, Strong Arm","180,000",z star 52,,,,,,1
+183,*Ugroth Bolgrot ,5,3,3,9,"Loner, Chainsaw, Secret Weapon","100,000",z star 53,,,,,,1
+184,*Varag Ghoul-Chewer,6,4,3,9,"Loner, Block, Jump Up, Mighty Blow, Thick Skull","290,000",z star 54,,,,,,1
+185,*Wilhelm Chaney ,8,4,3,8,"Loner, Catch, Claws, Frenzy, Regeneration, Wrestle","240,000",z star 55,,,,,,1
+186,*Willow Rosebark,5,4,3,8,"Loner, Dauntless, Side Step, Thick Skull","150,000",z star 56,,,,,,1
+187,*Zara the Slayer,6,4,3,8,"Loner, Block, Dauntless, Dodge, Jump Up, Stab, Stakes","270,000",z star 57,,,,,,1
+188,*Zzharg Mad Eye,4,4,3,9,"Loner, Hail Mary Pass, Pass, S.Weapon, Strong Arm, Sure Hands, Tackle, Thick Sk.","90,000",z star 58,,,,,,1

@@ -11,7 +11,7 @@ public class Dice
 		Log.d("Dice","New die made with " + sides + " sides.");
 	}
 	public int roll(){
-		int roll = random.nextInt(sides+1);
+		int roll = random.nextInt(sides)+1;
 		Log.d("Dice","Just rolled " + roll + " on a " + sides + " sided die.");
 		return roll;
 	}

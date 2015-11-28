@@ -4,14 +4,14 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:gravity="center"
-	android:orientation="vertical">
+	android:orientation="vertical"
+    android:id="@+id/blankslate">
 
-	<TextView
-		android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="wrap_content"
-		android:text="Medium Text"
-		android:id="@+id/maint"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/feedback" />
 </LinearLayout>
 

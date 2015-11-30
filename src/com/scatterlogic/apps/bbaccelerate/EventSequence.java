@@ -86,7 +86,7 @@ public class EventSequence{
         String output = "";
 
         for (int i = 0; i < events.size(); i++){
-            output += "||" + events.get(i).getTitle() + "\n" + events.get(i).getContent() +"\n\n";
+            output += "||" + events.get(i).getTitle() + "||\n" + events.get(i).getContent() +"\n\n";
         }
 
         return output;

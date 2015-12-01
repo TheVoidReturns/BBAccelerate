@@ -87,11 +87,15 @@
 		android:textStyle="bold"/>
 
 	<ImageView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
 		android:src="@android:drawable/ic_delete"
-		android:layout_centerInParent="true"
-		android:id="@+id/playerpic"/>
+		android:id="@+id/playerpic"
+		android:layout_below="@+id/playername"
+		android:layout_toRightOf="@+id/layout1LinearLayout1"
+		android:layout_alignRight="@+id/level"
+		android:layout_alignEnd="@+id/level"
+		android:layout_above="@+id/skills" />
 
 	<Button
 		android:layout_height="wrap_content"

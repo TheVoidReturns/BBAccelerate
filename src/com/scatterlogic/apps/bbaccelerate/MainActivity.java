@@ -1,6 +1,7 @@
 package com.scatterlogic.apps.bbaccelerate;
 
 import android.app.*;
+import android.graphics.Typeface;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
@@ -13,8 +14,9 @@ public class MainActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.playercard);
-		TextView mainT = new TextView(this);
+		TextView mainT = (TextView) findViewById(R.id.playername);
         ImageView player = (ImageView) findViewById(R.id.playerpic);
+        mainT.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/avqest.ttf"));
 		player.setImageResource(R.drawable.dopey);
         /*
         mainT.setText("one one");

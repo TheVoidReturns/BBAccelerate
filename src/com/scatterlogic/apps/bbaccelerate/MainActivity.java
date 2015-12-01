@@ -12,9 +12,12 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.playercard);
 		TextView mainT = new TextView(this);
-		mainT.setText("one one");
+        ImageView player = (ImageView) findViewById(R.id.playerpic);
+		player.setImageResource(R.drawable.dopey);
+        /*
+        mainT.setText("one one");
 		RelativeLayout BBCanvas = (RelativeLayout) findViewById(R.id.rlayout);
 		BBCanvas.addView(mainT);
 		Team demo = new Team();
@@ -26,6 +29,6 @@ public class MainActivity extends Activity
         EventSequence test = new EventSequence("Kick Off");
 
 		mainT.setText(test.toString());
-		
+		*/
     }
 }

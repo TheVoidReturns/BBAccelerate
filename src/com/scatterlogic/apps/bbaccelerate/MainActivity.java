@@ -16,7 +16,8 @@ public class MainActivity extends Activity
         setContentView(R.layout.playercard);
 		TextView mainT = (TextView) findViewById(R.id.playername);
         ImageView player = (ImageView) findViewById(R.id.playerpic);
-        mainT.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/avqest.ttf"));
+        Typeface testTypeface = Typeface.createFromAsset(getAssets(),"fonts/avqest.ttf");
+        mainT.setTypeface(testTypeface);
 		player.setImageResource(R.drawable.dopey);
         /*
         mainT.setText("one one");

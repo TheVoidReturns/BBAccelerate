@@ -12,7 +12,6 @@
 		android:layout_centerVertical="true"
 		android:layout_alignParentLeft="true"
 		android:id="@+id/layout1LinearLayout1"
-		android:padding="@dimen/abit"
 		android:background="#ffffff">
 
 		<TextView

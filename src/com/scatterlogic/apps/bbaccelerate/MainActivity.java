@@ -18,6 +18,20 @@ public class MainActivity extends Activity
         ImageView player = (ImageView) findViewById(R.id.playerpic);
         Typeface testTypeface = Typeface.createFromAsset(getAssets(),"fonts/avqest.ttf");
         mainT.setTypeface(testTypeface);
+
+        TextView stat1,stat2,stat3,stat4,lvl;
+        stat1 = (TextView) findViewById(R.id.ama);
+        stat2 = (TextView) findViewById(R.id.ast);
+        stat3 = (TextView) findViewById(R.id.aag);
+        stat4 = (TextView) findViewById(R.id.aav);
+        lvl = (TextView) findViewById(R.id.level);
+
+        stat1.setTypeface(testTypeface);
+        stat2.setTypeface(testTypeface);
+        stat3.setTypeface(testTypeface);
+        stat4.setTypeface(testTypeface);
+        lvl.setTypeface(testTypeface);
+
 		player.setImageResource(R.drawable.dopey);
         /*
         mainT.setText("one one");

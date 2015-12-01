@@ -17,7 +17,8 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:text="MA"
-			android:textStyle="bold"/>
+			android:textStyle="bold"
+			android:id="@+id/ama" />
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -31,7 +32,8 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:text="ST"
-			android:textStyle="bold"/>
+			android:textStyle="bold"
+			android:id="@+id/ast" />
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -45,7 +47,8 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:text="AG"
-			android:textStyle="bold"/>
+			android:textStyle="bold"
+			android:id="@+id/aag" />
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -59,7 +62,8 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:text="AV"
-			android:textStyle="bold"/>
+			android:textStyle="bold"
+			android:id="@+id/aav" />
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -80,11 +84,17 @@
 	<TextView
 		android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content"
+		android:layout_width="fill_parent"
 		android:text="No Name"
-		android:layout_centerHorizontal="true"
 		android:id="@+id/playername"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+		android:layout_alignLeft="@+id/playerpic"
+		android:layout_alignStart="@+id/playerpic"
+		android:layout_toLeftOf="@+id/level"
+		android:layout_toStartOf="@+id/level"
+		android:textAlignment="center"
+		android:gravity="center_horizontal"
+		android:textSize="@android:dimen/app_icon_size" />
 
 	<ImageView
 		android:layout_height="fill_parent"

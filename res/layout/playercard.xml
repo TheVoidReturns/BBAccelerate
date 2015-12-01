@@ -105,7 +105,15 @@
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="wrap_content"
 		android:text="0"
-		android:id="@+id/playerno"/>
+		android:id="@+id/playerno"
+		android:layout_above="@+id/playerpic"
+		android:layout_toLeftOf="@+id/playername"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:background="#000000"
+		android:textAlignment="center"
+		android:gravity="center_vertical|center_horizontal"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -120,7 +128,9 @@
 		android:layout_toStartOf="@+id/level"
 		android:textAlignment="center"
 		android:gravity="center_horizontal"
-		android:textSize="@android:dimen/app_icon_size" />
+		android:textSize="@android:dimen/app_icon_size"
+		android:background="#000000"
+		/>
 
 	<ImageView
 		android:layout_height="fill_parent"
@@ -170,7 +180,12 @@
 		android:layout_width="wrap_content"
 		android:text="Lvl 1"
 		android:layout_alignParentRight="true"
-		android:id="@+id/level"/>
+		android:id="@+id/level"
+		android:layout_above="@+id/playerpic"
+		android:layout_alignParentTop="true"
+		android:background="#000000"
+		android:textAlignment="center"
+		android:gravity="center_vertical|center_horizontal"/>
 
 </RelativeLayout>
 

@@ -13,7 +13,10 @@ public class MainActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-		TextView mainT = (TextView) findViewById(R.id.feedback);
+		TextView mainT = new TextView(this);
+		mainT.setText("one one");
+		RelativeLayout BBCanvas = (RelativeLayout) findViewById(R.id.rlayout);
+		BBCanvas.addView(mainT);
 		Team demo = new Team();
         Dice d8 = new Dice(8);
         for (int i = 0; i < 100; i++) d8.roll();

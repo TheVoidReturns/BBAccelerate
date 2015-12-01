@@ -16,7 +16,8 @@
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
-			android:text="MA"/>
+			android:text="MA"
+			android:textStyle="bold"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -29,7 +30,8 @@
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
-			android:text="ST"/>
+			android:text="ST"
+			android:textStyle="bold"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -42,7 +44,8 @@
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
-			android:text="AG"/>
+			android:text="AG"
+			android:textStyle="bold"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -55,7 +58,8 @@
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
-			android:text="AV"/>
+			android:text="AV"
+			android:textStyle="bold"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -79,7 +83,8 @@
 		android:layout_width="wrap_content"
 		android:text="No Name"
 		android:layout_centerHorizontal="true"
-		android:id="@+id/playername"/>
+		android:id="@+id/playername"
+		android:textStyle="bold"/>
 
 	<ImageView
 		android:layout_height="wrap_content"
@@ -128,5 +133,4 @@
 		android:id="@+id/level"/>
 
 </RelativeLayout>
-
 

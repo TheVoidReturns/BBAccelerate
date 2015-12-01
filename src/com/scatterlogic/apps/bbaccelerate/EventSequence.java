@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class EventSequence{
         private ArrayList<BBEvent> events;
+		
+		Team team1,team2;
 
         String tempTitle, tempContent, tempNote;
 
@@ -23,6 +25,7 @@ public class EventSequence{
             tempContent = "";
             tempNote = "";
         }
+	public BBEvent getNextEvent;
 
         private void goThroughKickOff(){
             events.add(new BBEvent("Place ball","Place the ball anywhere on the pitch","It's really pretty simple"));

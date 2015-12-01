@@ -21,7 +21,7 @@ public class MainActivity extends Activity
         Dice d8 = new Dice(8);
         for (int i = 0; i < 100; i++) d8.roll();
 
-		demo.getPlayer(1).setName("Robin");
+		demo.getPlayer(1).setName("Robin2");
 
         EventSequence test = new EventSequence("Kick Off");
 

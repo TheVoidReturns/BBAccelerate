@@ -11,67 +11,89 @@
 		android:orientation="vertical"
 		android:layout_centerVertical="true"
 		android:layout_alignParentLeft="true"
-		android:id="@+id/layout1LinearLayout1">
+		android:id="@+id/layout1LinearLayout1"
+		android:padding="@dimen/abit"
+		android:background="#ffffff">
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="MA"
 			android:textStyle="bold"
-			android:id="@+id/ama" />
+			android:id="@+id/ama"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="0"
-			android:id="@+id/ma"/>
+			android:id="@+id/ma"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="#999191" />
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="ST"
 			android:textStyle="bold"
-			android:id="@+id/ast" />
+			android:id="@+id/ast"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="0"
-			android:id="@+id/st"/>
+			android:id="@+id/st"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="#999191"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="AG"
 			android:textStyle="bold"
-			android:id="@+id/aag" />
+			android:id="@+id/aag"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="0"
-			android:id="@+id/ag"/>
+			android:id="@+id/ag"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="#999191"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="AV"
 			android:textStyle="bold"
-			android:id="@+id/aav" />
+			android:id="@+id/aav"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"/>
 
 		<TextView
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:text="0"
-			android:id="@+id/av"/>
+			android:id="@+id/av"
+			android:textAlignment="center"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="#999191"/>
 
 	</LinearLayout>
 

@@ -25,6 +25,12 @@ public class MainActivity extends Activity
         stat3 = (TextView) findViewById(R.id.aag);
         stat4 = (TextView) findViewById(R.id.aav);
         lvl = (TextView) findViewById(R.id.level);
+		
+		Player demo = new Player();
+		demo.addMvp("Test");
+		demo.addMvp("Test");
+		
+		lvl.setText("Lvl: " + demo.getLevel());
 
         stat1.setTypeface(testTypeface);
         stat2.setTypeface(testTypeface);

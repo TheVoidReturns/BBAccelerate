@@ -23,7 +23,7 @@
 			android:id="@+id/ama"
 			android:textAlignment="center"
 			android:gravity="center_vertical|center_horizontal"
-			android:background="#000000" />
+			android:background="#000000"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
 			android:id="@+id/ma"
 			android:textAlignment="center"
 			android:gravity="center_vertical|center_horizontal"
-			android:background="#999191" />
+			android:background="#999191"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
 			android:id="@+id/ast"
 			android:textAlignment="center"
 			android:gravity="center_vertical|center_horizontal"
-			android:background="#000000" />
+			android:background="#000000"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
 			android:id="@+id/aag"
 			android:textAlignment="center"
 			android:gravity="center_vertical|center_horizontal"
-			android:background="#000000" />
+			android:background="#000000"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
 			android:id="@+id/aav"
 			android:textAlignment="center"
 			android:gravity="center_vertical|center_horizontal"
-			android:background="#000000" />
+			android:background="#000000"/>
 
 		<TextView
 			android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
 		android:layout_alignParentTop="true"
 		android:layout_alignParentLeft="true"
 		android:layout_alignParentStart="true"
-		android:background="#000000"
+		android:background="#141B6C"
 		android:textAlignment="center"
 		android:gravity="center_vertical|center_horizontal"/>
 
@@ -129,8 +129,7 @@
 		android:textAlignment="center"
 		android:gravity="center_horizontal"
 		android:textSize="@android:dimen/app_icon_size"
-		android:background="#000000"
-		/>
+		android:background="#000000"/>
 
 	<ImageView
 		android:layout_height="fill_parent"
@@ -141,7 +140,7 @@
 		android:layout_toRightOf="@+id/layout1LinearLayout1"
 		android:layout_alignRight="@+id/level"
 		android:layout_alignEnd="@+id/level"
-		android:layout_above="@+id/skills" />
+		android:layout_above="@+id/skills"/>
 
 	<Button
 		android:layout_height="wrap_content"
@@ -183,7 +182,7 @@
 		android:id="@+id/level"
 		android:layout_above="@+id/playerpic"
 		android:layout_alignParentTop="true"
-		android:background="#000000"
+		android:background="#CA1D12"
 		android:textAlignment="center"
 		android:gravity="center_vertical|center_horizontal"/>
 

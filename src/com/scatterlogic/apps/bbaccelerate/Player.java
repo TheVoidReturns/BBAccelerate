@@ -408,4 +408,24 @@ public class Player
 		}
 		addNote("Skill Up", skill);
 	}
+	public int getLevel(){
+		int level;
+		
+		if (starPlayerPoints >= 176){
+			level = 6;
+		} else if (starPlayerPoints >= 76){
+		level = 5;
+		} else if (starPlayerPoints >= 51){
+		level = 4;
+		} else if (starPlayerPoints >= 31){
+			level = 3;
+		} else if (starPlayerPoints >= 16){
+		level = 2;
+		} else if (starPlayerPoints >= 6){
+		level = 1;
+		} else {
+			level = 0;
+		}
+		return level;
+	}
 }

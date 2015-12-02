@@ -9,7 +9,8 @@
 		android:layout_width="match_parent"
 		android:gravity="center"
 		android:textAlignment="center"
-		android:background="#CDBFBC"/>
+		android:background="#CDBFBC"
+		android:id="@+id/dicerollerSpinner1"/>
 
 	<LinearLayout
 		style="?android:attr/buttonBarStyle"

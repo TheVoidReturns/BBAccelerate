@@ -9,14 +9,63 @@
 		android:layout_width="match_parent"
 		android:gravity="center"
 		android:textAlignment="center"
-		android:background="#CDBFBC"
 		android:id="@+id/dicerollerSpinner1"/>
 
-	<LinearLayout
-		style="?android:attr/buttonBarStyle"
+	<Button
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
-		android:orientation="horizontal"/>
+		android:text="Roll 1"
+		android:id="@+id/roll1"
+		android:layout_below="@id/dicerollerSpinner1"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Roll 2"
+		android:id="@+id/roll2"
+		android:layout_below="@id/dicerollerSpinner1"
+		android:layout_centerHorizontal="true"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Roll 3"
+		android:id="@+id/roll3"
+		android:layout_below="@id/dicerollerSpinner1"
+		android:layout_alignParentRight="true"/>
+
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@android:drawable/ic_delete"
+		android:layout_below="@id/roll1"
+		android:id="@+id/die1"/>
+
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@android:drawable/ic_delete"
+		android:layout_below="@id/roll2"
+		android:id="@+id/die2"
+		android:layout_centerHorizontal="true"/>
+
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:src="@android:drawable/ic_delete"
+		android:layout_below="@id/roll3"
+		android:id="@+id/die3"
+		android:layout_alignParentRight="true"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:text="Large Text"
+		android:layout_alignParentBottom="true"
+		android:textAlignment="center"
+		android:gravity="center_horizontal"
+		android:id="@+id/feedbackline"/>
 
 </RelativeLayout>
 

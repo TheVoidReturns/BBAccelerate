@@ -20,6 +20,10 @@ android:versionName="1.0" >
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+	<activity
+        android:label="Dice Roller"
+        android:name=".DiceRollActivity" >
+    </activity>
 </application>
 
 </manifest>

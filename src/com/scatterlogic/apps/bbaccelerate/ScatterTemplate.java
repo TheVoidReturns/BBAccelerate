@@ -15,7 +15,8 @@ public class ScatterTemplate {
         for (int i = 0; i < 8; i++){
             ScatterShow[i] = '0';
         }
-        ScatterShow[d8.roll()-1] = 'X';
+		d8.roll();
+        ScatterShow[d8.getValue()-1] = 'X';
     }
     public String toString(){
         String output = "";

@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
+import android.content.*;
 
 public class MainActivity extends Activity
 {
@@ -13,6 +14,10 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
+		Intent myIntent = new Intent(this, DiceRollActivity.class);
+		startActivity(myIntent);
+		
+		/*
         setContentView(R.layout.playercard);
 		TextView mainT = (TextView) findViewById(R.id.playername);
         ImageView player = (ImageView) findViewById(R.id.playerpic);

@@ -32,13 +32,20 @@ public class EventSequence{
 
             //now the ball will scatter on a d8 and d6
             Dice d6 = new Dice(6);
+			d6.roll();
+            int roll = d6.getValue();
+            int roll2;
+			
             ScatterTemplate scatter = new ScatterTemplate();
-            events.add(new BBEvent("Scatter Ball", "Scatters " + d6.roll() + " squares like this:\n" + scatter.toString(),"No extra detail"));
+            events.add(new BBEvent("Scatter Ball", "Scatters " + roll + " squares like this:\n" + scatter.toString(),"No extra detail"));
 
             tempTitle = "Kick Off!";
-
-            int roll = d6.roll();
-            int roll2 = d6.roll();
+			
+			d6.roll();
+			roll = d6.getValue();
+            d6.roll();
+			roll2 = d6.getValue();
+			
 
             tempContent = "";
             tempContent += "Roll of " + roll + " and " + roll2 + ": ";

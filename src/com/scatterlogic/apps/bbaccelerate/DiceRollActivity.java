@@ -7,6 +7,7 @@ import android.view.*;
 
 public class DiceRollActivity extends Activity implements OnItemSelectedListener
 {
+
 	static String[] diceTypes = {"d6","Block","d8","Injury","Serious Injury Table"};
 	Button rollOne, rollTwo, rollThree;
 	ImageView dieOne,dieTwo,dieThree;
@@ -23,13 +24,46 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, diceTypes);
 		dropDown.setAdapter(adapter);
 		dropDown.setOnItemSelectedListener(this);
-		rollOne = (Button) findViewById(R.id.button1);
-		rollTwo = (Button) findViewById(R.id.button2);
-		rollThree = (Button) findViewById(R.id.button3);
 		
-		dieOne = (ImageView) findViewById(R.id.button1);
-		dieTwo = (ImageView) findViewById(R.id.button2);
-		dieThree = (ImageView) findViewById(R.id.button3);
+		
+		//dieOne = (ImageView) findViewById(R.id.button1);
+		//dieTwo = (ImageView) findViewById(R.id.button2);
+		//dieThree = (ImageView) findViewById(R.id.button3);
+		
+
+		feedback = (TextView) findViewById(R.id.feedbackline);
+		
+
+		rollOne = (Button) findViewById(R.id.roll1);
+		rollOne.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					feedback.setText("");
+					dice.roll();
+					feedback.setText(dice.getValueAsString());
+				}
+			});
+		rollTwo = (Button) findViewById(R.id.roll2);
+		rollTwo.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					feedback.setText("");
+					dice.roll();
+					feedback.setText(dice.getValueAsString()+ ", ");
+					dice.roll();
+					feedback.setText(feedback.getText() + dice.getValueAsString());
+				}
+			});
+		rollThree = (Button) findViewById(R.id.roll3);
+		rollThree.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					feedback.setText("");
+					dice.roll();
+					feedback.setText(dice.getValueAsString()+ ", ");
+					dice.roll();
+					feedback.setText(feedback.getText() + dice.getValueAsString()+ ", ");
+					dice.roll();
+					feedback.setText(feedback.getText() + dice.getValueAsString());
+				}
+			});
 	}
 
 	@Override
@@ -72,6 +106,5 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 	{
 		// TODO: Implement this method
 	}
-	
 	
 }

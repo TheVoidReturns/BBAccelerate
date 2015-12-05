@@ -11,51 +11,6 @@
 		android:textAlignment="center"
 		android:id="@+id/dicerollerSpinner1"/>
 
-	<Button
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Roll 1"
-		android:id="@+id/roll1"
-		android:layout_below="@id/dicerollerSpinner1"/>
-
-	<Button
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Roll 2"
-		android:id="@+id/roll2"
-		android:layout_below="@id/dicerollerSpinner1"
-		android:layout_centerHorizontal="true"/>
-
-	<Button
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Roll 3"
-		android:id="@+id/roll3"
-		android:layout_below="@id/dicerollerSpinner1"
-		android:layout_alignParentRight="true"/>
-
-	<ImageView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:src="@android:drawable/ic_delete"
-		android:layout_below="@id/roll1"
-		android:id="@+id/die1"/>
-
-	<ImageView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:src="@android:drawable/ic_delete"
-		android:layout_below="@id/roll2"
-		android:id="@+id/die2"
-		android:layout_centerHorizontal="true"/>
-
-	<ImageView
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:src="@android:drawable/ic_delete"
-		android:layout_below="@id/roll3"
-		android:id="@+id/die3"
-		android:layout_alignParentRight="true"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -66,6 +21,89 @@
 		android:textAlignment="center"
 		android:gravity="center_horizontal"
 		android:id="@+id/feedbackline"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/dicerollerSpinner1"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:id="@+id/ll1">
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Roll 1"
+			android:id="@+id/roll1"
+			android:layout_below="@+id/dicerollerSpinner1"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_weight="1" />
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Roll 2"
+			android:id="@+id/roll2"
+			android:layout_below="@id/dicerollerSpinner1"
+			android:layout_centerHorizontal="true"
+			android:layout_weight="1" />
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Roll 3"
+			android:id="@+id/roll3"
+			android:layout_below="@id/dicerollerSpinner1"
+			android:layout_alignParentRight="true"
+			android:layout_weight="1" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/ll1"
+		android:layout_above="@+id/feedbackline">
+
+		<ImageView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:src="@android:drawable/ic_delete"
+			android:id="@+id/die1"
+			android:layout_alignTop="@+id/die2"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_above="@+id/feedbackline"
+			android:layout_alignRight="@+id/roll1"
+			android:layout_alignEnd="@+id/roll1"
+			android:layout_weight="1"/>
+
+		<ImageView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:src="@android:drawable/ic_delete"
+			android:layout_below="@id/roll2"
+			android:id="@+id/die2"
+			android:layout_above="@+id/feedbackline"
+			android:layout_alignRight="@+id/roll2"
+			android:layout_alignEnd="@+id/roll2"
+			android:layout_alignLeft="@+id/roll2"
+			android:layout_alignStart="@+id/roll2"
+			android:layout_weight="1"/>
+
+		<ImageView
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:src="@android:drawable/ic_delete"
+			android:layout_below="@id/roll3"
+			android:id="@+id/die3"
+			android:layout_alignParentRight="true"
+			android:layout_above="@+id/feedbackline"
+			android:layout_alignLeft="@+id/roll3"
+			android:layout_alignStart="@+id/roll3"
+			android:layout_weight="1"/>
+	</LinearLayout>
 
 </RelativeLayout>
 

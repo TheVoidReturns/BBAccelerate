@@ -4,6 +4,7 @@ package com.scatterlogic.apps.bbaccelerate;
 //A class to define a sequence of events, returning the next pertinent event, rolling, and seeking input where appropriate
 
 import java.util.ArrayList;
+import android.content.*;
 
 public class EventSequence{
         private ArrayList<BBEvent> events;
@@ -30,7 +31,7 @@ public class EventSequence{
         private void goThroughKickOff(){
             events.add(new BBEvent("Place ball","Place the ball anywhere on the pitch","It's really pretty simple"));
 
-            //now the ball will scatter on a d8 and d6
+            /*now the ball will scatter on a d8 and d6
             Dice d6 = new Dice(6);
 			d6.roll();
             int roll = d6.getValue();
@@ -89,7 +90,7 @@ public class EventSequence{
 
             scatter = new ScatterTemplate();
             events.add(new BBEvent("Ball Bounces", "Scatters like this:\n" + scatter.toString(),"No extra detail"));
-
+			*/
         }
 
     public String toString(){

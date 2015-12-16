@@ -26,12 +26,13 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 		dropDown.setOnItemSelectedListener(this);
 		
 		
-		//dieOne = (ImageView) findViewById(R.id.button1);
-		//dieTwo = (ImageView) findViewById(R.id.button2);
-		//dieThree = (ImageView) findViewById(R.id.button3);
+		dieOne = (ImageView) findViewById(R.id.die1);
+		dieTwo = (ImageView) findViewById(R.id.die2);
+		dieThree = (ImageView) findViewById(R.id.die3);
 		
 
 		feedback = (TextView) findViewById(R.id.feedbackline);
+		
 		
 
 		rollOne = (Button) findViewById(R.id.roll1);
@@ -40,6 +41,7 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					feedback.setText("");
 					dice.roll();
 					feedback.setText(dice.getValueAsString());
+					dieOne.setImageDrawable(dice.getPictureOfDie());
 				}
 			});
 		rollTwo = (Button) findViewById(R.id.roll2);
@@ -48,8 +50,10 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					feedback.setText("");
 					dice.roll();
 					feedback.setText(dice.getValueAsString()+ ", ");
+					dieOne.setImageDrawable(dice.getPictureOfDie());
 					dice.roll();
 					feedback.setText(feedback.getText() + dice.getValueAsString());
+					dieTwo.setImageDrawable(dice.getPictureOfDie());
 				}
 			});
 		rollThree = (Button) findViewById(R.id.roll3);
@@ -58,10 +62,13 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					feedback.setText("");
 					dice.roll();
 					feedback.setText(dice.getValueAsString()+ ", ");
+					dieOne.setImageDrawable(dice.getPictureOfDie());
 					dice.roll();
 					feedback.setText(feedback.getText() + dice.getValueAsString()+ ", ");
+					dieTwo.setImageDrawable(dice.getPictureOfDie());
 					dice.roll();
 					feedback.setText(feedback.getText() + dice.getValueAsString());
+					dieThree.setImageDrawable(dice.getPictureOfDie());
 				}
 			});
 	}
@@ -85,19 +92,19 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 		
         switch (position) {
             case 0:
-				dice = new Dice(6);
+				dice = new Dice(6,this);
                 break;
             case 1:
-                dice = new Dice("Block");
+                dice = new Dice("Block",this);
                 break;
             case 2:
-                dice = new Dice(8);
+                dice = new Dice(8,this);
                 break;
 			case 3:
-                dice = new Dice("Injury");
+                dice = new Dice("Injury",this);
                 break;
 			case 4:
-                dice = new Dice("Serious Injury");
+                dice = new Dice("Serious Injury",this);
                 break;
         }
     }

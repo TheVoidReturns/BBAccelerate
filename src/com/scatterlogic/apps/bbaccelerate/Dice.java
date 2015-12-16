@@ -1,23 +1,34 @@
 package com.scatterlogic.apps.bbaccelerate;
-import java.util.*;
+import android.content.*;
+import android.graphics.drawable.*;
 import android.util.*;
+import com.scatterlogic.apps.bbaccelerate.*;
+import java.util.*;
+import android.app.*;
+import android.content.res.*;
 
-public class Dice
+public class Dice extends Application
 {
 	Random random = new Random();
 	int sides;
 	String specialType;
 	int diceValue;
+	Resources res;
 	
-	public Dice(int sides){
+	static Drawable[] sixSidedPics;
+	static Drawable[] blockDie;
+	
+	public Dice(int sides, Context context){
 		this.sides = sides;
 		Log.d("Dice","New die made with " + sides + " sides.");
 		specialType = "";
-		diceValue = 0;
+		diceValue = 0; 
+		res = context.getResources();
 	}
-	public Dice(String diceType){
+	public Dice(String diceType, Context context){
 		specialType = diceType;
 		sides = 0;
+		res = context.getResources();
 	}
 	public void roll(){
 		if (sides > 0){
@@ -89,5 +100,40 @@ public class Dice
 		Log.d("Dice","Just rolled " + diceValue + " on a " + sides + " sided die.");
 		return "Hideous Dice Error In Program with " + diceValue + " on a " + sides + " sided " + specialType + " die.";
 	}
-	
+	public Drawable getPictureOfDie(){
+		if (this.sides ==6){
+			if (diceValue == 1){
+				return res.getDrawable (R.drawable.d6_1);
+			}
+			if (diceValue == 2){
+				return res.getDrawable  (R.drawable.d6_2);
+			}
+			if (diceValue == 3){
+				return res.getDrawable  (R.drawable.d6_3);
+			}
+			if (diceValue == 4){
+				return res.getDrawable  (R.drawable.d6_4);
+			}
+			if (diceValue == 5){
+				return res.getDrawable (R.drawable.d6_5);
+			}
+			if (diceValue == 6){
+				return res.getDrawable  (R.drawable.d6_6);
+			}
+		} else if (specialType.equals("Block")){	
+			switch (diceValue){
+				case 1:
+					return res.getDrawable  (R.drawable.dblock_adown);
+				case 2:
+					return res.getDrawable  (R.drawable.dblock_bdown);
+				case 3: case 4:
+					return res.getDrawable  (R.drawable.dblock_push);
+				case 5:
+					return res.getDrawable  (R.drawable.dblock_dstumbles);
+				case 6:
+					return res.getDrawable  (R.drawable.dblock_ddown);
+			}
+		}
+		return res.getDrawable (R.drawable.dopey);
+	}
 }

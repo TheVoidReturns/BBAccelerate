@@ -10,13 +10,13 @@ public class ScatterTemplate {
     static char[] ScatterShow;
 
     public ScatterTemplate(){
-        ScatterShow = new char[8];
+        /*ScatterShow = new char[8];
         Dice d8 = new Dice(8);
         for (int i = 0; i < 8; i++){
             ScatterShow[i] = '0';
         }
 		d8.roll();
-        ScatterShow[d8.getValue()-1] = 'X';
+        ScatterShow[d8.getValue()-1] = 'X';*/
     }
     public String toString(){
         String output = "";

@@ -1,5 +1,8 @@
 package com.scatterlogic.apps.bbaccelerate;
 import android.content.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.drawable.*;
 import android.util.*;
 import com.scatterlogic.apps.bbaccelerate.*;
@@ -133,7 +136,41 @@ public class Dice extends Application
 				case 6:
 					return res.getDrawable  (R.drawable.dblock_ddown);
 			}
+		} else if (this.sides ==8){
+			if (diceValue == 1){
+				return res.getDrawable (R.drawable.arrow_east);
+			}
+			if (diceValue == 2){
+				return res.getDrawable  (R.drawable.arrow_southeast);
+			}
+			if (diceValue == 3){
+				return imageRotate(R.drawable.arrow_east,90);
+			}
+			if (diceValue == 4){
+				return imageRotate(R.drawable.arrow_southeast,90);
+			}
+			if (diceValue == 5){
+				return imageRotate(R.drawable.arrow_east,180);
+			}
+			if (diceValue == 6){
+				return imageRotate(R.drawable.arrow_southeast,180);
+			}
+			if (diceValue == 7){
+				return imageRotate(R.drawable.arrow_east,270);
+			}
+			if (diceValue == 8){
+				return imageRotate(R.drawable.arrow_southeast,270);
+			}
 		}
 		return res.getDrawable (R.drawable.dopey);
+	}
+	Drawable imageRotate(int submitted, int rotation){
+			Bitmap bmpOriginal = BitmapFactory.decodeResource(res, submitted);
+			Bitmap bmResult = Bitmap.createBitmap(bmpOriginal.getWidth(), bmpOriginal.getHeight(), Bitmap.Config.ARGB_8888);
+			Canvas tempCanvas = new Canvas(bmResult);
+			tempCanvas.rotate(rotation, bmpOriginal.getWidth() / 2, bmpOriginal.getHeight() / 2);
+			tempCanvas.drawBitmap(bmpOriginal, 0, 0, null);
+
+			return new BitmapDrawable(res, bmResult);
 	}
 }

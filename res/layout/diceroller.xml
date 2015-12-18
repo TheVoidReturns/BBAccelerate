@@ -77,7 +77,8 @@
 			android:layout_above="@+id/feedbackline"
 			android:layout_alignRight="@+id/roll1"
 			android:layout_alignEnd="@+id/roll1"
-			android:layout_weight="1"/>
+			android:layout_weight="1"
+			android:scaleType="fitStart" />
 
 		<ImageView
 			android:layout_height="match_parent"
@@ -90,7 +91,8 @@
 			android:layout_alignEnd="@+id/roll2"
 			android:layout_alignLeft="@+id/roll2"
 			android:layout_alignStart="@+id/roll2"
-			android:layout_weight="1"/>
+			android:layout_weight="1"
+			android:scaleType="fitStart" />
 
 		<ImageView
 			android:layout_height="match_parent"
@@ -102,7 +104,8 @@
 			android:layout_above="@+id/feedbackline"
 			android:layout_alignLeft="@+id/roll3"
 			android:layout_alignStart="@+id/roll3"
-			android:layout_weight="1"/>
+			android:layout_weight="1"
+			android:scaleType="fitStart" />
 	</LinearLayout>
 
 </RelativeLayout>

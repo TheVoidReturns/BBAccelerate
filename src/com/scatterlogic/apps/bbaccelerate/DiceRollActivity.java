@@ -17,7 +17,6 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.diceroller);
 		Spinner dropDown = (Spinner) findViewById(R.id.dicerollerSpinner1);
@@ -41,8 +40,8 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					feedback.setText("");
 					dice.roll();
 					feedback.setText(dice.getValueAsString());
-					dieOne.setImageDrawable(dice.getPictureOfDie());
-					dieTwo.setImageDrawable(null);
+					dieTwo.setImageDrawable(dice.getPictureOfDie());
+					dieOne.setImageDrawable(null);
 					dieThree.setImageDrawable(null);
 				}
 			});

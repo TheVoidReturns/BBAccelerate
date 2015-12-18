@@ -42,6 +42,8 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					dice.roll();
 					feedback.setText(dice.getValueAsString());
 					dieOne.setImageDrawable(dice.getPictureOfDie());
+					dieTwo.setImageDrawable(null);
+					dieThree.setImageDrawable(null);
 				}
 			});
 		rollTwo = (Button) findViewById(R.id.roll2);
@@ -54,6 +56,7 @@ public class DiceRollActivity extends Activity implements OnItemSelectedListener
 					dice.roll();
 					feedback.setText(feedback.getText() + dice.getValueAsString());
 					dieTwo.setImageDrawable(dice.getPictureOfDie());
+					dieThree.setImageDrawable(null);
 				}
 			});
 		rollThree = (Button) findViewById(R.id.roll3);

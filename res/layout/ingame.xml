@@ -2,7 +2,7 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_height="match_parent"
 	android:orientation="horizontal">
 
 	<LinearLayout
@@ -11,27 +11,31 @@
 		android:orientation="vertical">
 
 		<Button
+			android:id="@+id/kickoff"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Kick Off"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/block"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Block"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/pass"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Pass"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/dodge"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Dodge"
 			android:layout_weight="1.0"/>
 
 	</LinearLayout>
@@ -42,58 +46,90 @@
 		android:orientation="vertical">
 
 		<Button
+			android:id="@+id/pickup"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Pick Up"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/throwin"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Throw In"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/intercept"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="Intercept"
 			android:layout_weight="1.0"/>
 
 		<Button
+			android:id="@+id/endturn"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Button"
+			android:text="End Turn"
 			android:layout_weight="1.0"/>
 
 	</LinearLayout>
 
 	<LinearLayout
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:layout_width="wrap_content"
-		android:orientation="vertical"/>
+		android:orientation="vertical"
+		android:layout_weight="4">
+
+		<TextView
+			android:id="@+id/teamturnname"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:text="Large Text"
+			android:textSize="64sp"
+			android:gravity="center"/>
+
+		<ScrollView
+			android:id="@+id/gamelogpanel"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"/>
+
+	</LinearLayout>
 
 	<LinearLayout
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:layout_width="wrap_content"
-		android:orientation="vertical">
+		android:orientation="vertical"
+		android:layout_weight=".5"
+		android:gravity="right">
 
 		<TextView
+			android:id="@+id/turnnumber"
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
-			android:text="Large Text"/>
+			android:layout_width="match_parent"
+			android:text="Large Text"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
 
 		<TextView
+			android:id="@+id/rerolls"
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
-			android:text="Large Text"/>
+			android:layout_width="match_parent"
+			android:text="Large Text"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
 
 		<TextView
+			android:id="@+id/timer"
 			android:layout_height="wrap_content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
-			android:text="Large Text"/>
+			android:layout_width="match_parent"
+			android:text="Large Text"
+			android:layout_weight="1.0"
+			android:gravity="center"/>
 
 	</LinearLayout>
 

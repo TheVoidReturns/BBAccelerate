@@ -24,6 +24,10 @@ android:versionName="1.0" >
         android:label="Dice Roller"
         android:name=".DiceRollActivity" >
     </activity>
+	<activity
+        android:label="In Game"
+        android:name=".InGameActivity" >
+    </activity>
 </application>
 
 </manifest>

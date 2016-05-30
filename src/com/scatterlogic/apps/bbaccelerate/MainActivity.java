@@ -14,7 +14,7 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
-		Intent myIntent = new Intent(this, DiceRollActivity.class);
+		Intent myIntent = new Intent(this, InGameActivity.class);
 		startActivity(myIntent);
 		
 		/*

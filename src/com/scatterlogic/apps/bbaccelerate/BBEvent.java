@@ -3,12 +3,10 @@ package com.scatterlogic.apps.bbaccelerate;
 public class BBEvent{
         private String eventTitle;
         private String eventContent;
-        private String eventFurtherInfo;
 
-        public BBEvent(String title, String content, String eventFurtherInfo){
+        public BBEvent(String title, String content){
             this.eventTitle = title;
             this.eventContent= content;
-            this.eventFurtherInfo = eventFurtherInfo;
         }
 
         public String getTitle(){
@@ -17,10 +15,6 @@ public class BBEvent{
 
         public String getContent(){
             return eventContent;
-        }
-
-        public String getEventFurtherInfo(){
-            return eventFurtherInfo;
         }
 
 }

@@ -4,27 +4,33 @@ import android.os.*;
 import android.widget.*;
 import android.widget.AdapterView.*;
 import android.view.*;
+import android.util.Log;
 
-public class InGameActivity extends Activity implements OnItemSelectedListener
+public class InGameActivity extends Activity
 {
+	Button[] allButtons = new Button[8];
+	String[] teamNames;
 	Button kickOffButton, pickUpButton, blockButton, throwInButton,passButton,
 	interceptButton, dodgeButton,endTurnButton;
 	//ImageView dieOne,dieTwo,dieThree;
 	TextView teamWhoseTurnItIsTV, turnNumberTV, reRollsTV, TimerTV;
+	LinearLayout actionLogPanel;
 	Dice dice;
-
+	Integer turnNumber;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.ingame);
-
-		teamWhoseTurnItIsTV= (TextView) findViewById(R.id.teamturnname);
-		turnNumberTV= (TextView) findViewById(R.id.turnnumber);
-		reRollsTV= (TextView) findViewById(R.id.rerolls);
-		TimerTV= (TextView) findViewById(R.id.timer);
+		assignXMLComponentsToVariables();
+		tidyUpLayout();
 		
+		teamNames = new String[] {"Team 1", "Team 2"};
+		turnNumber = 0;
 		
+		teamWhoseTurnItIsTV.setText(teamNames[0]);
+		turnNumberTV.setText("Turn\n"+turnNumber);
 		/*
 		rollOne = (Button) findViewById(R.id.roll1);
 		rollOne.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +45,22 @@ public class InGameActivity extends Activity implements OnItemSelectedListener
 			});
 		*/
 		
+		for(int i = 1; i<10;i++){
+			actionLogPanel.addView(new gameEventPanel("Title","Info","",this,R.color.deepgreen,R.color.white,R.color.green,R.color.black).EventPanel);
+			actionLogPanel.addView(new gameEventPanel("Title2","Info","",this,R.color.deepblue,R.color.white,R.color.blue,R.color.white).EventPanel);
+			actionLogPanel.addView(new gameEventPanel("Title3","Info","",this,R.color.deepred,R.color.white,R.color.red,R.color.white).EventPanel);
+			actionLogPanel.addView(new gameEventPanel("Title4","Info","",this,R.color.purple,R.color.white,R.color.bluegrey,R.color.black).EventPanel);
+			actionLogPanel.addView(new gameEventPanel("Title5","Info","",this,R.color.yellow,R.color.white,R.color.bluegrey,R.color.black).EventPanel);
+		}
 	}
 
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+		
+	}
+	
 	@Override
 	protected void onPause()
 	{
@@ -54,32 +74,44 @@ public class InGameActivity extends Activity implements OnItemSelectedListener
 		// TODO: Implement this method
 		super.onDestroy();
 	}
+	
+	private void assignXMLComponentsToVariables(){
+		teamWhoseTurnItIsTV= (TextView) findViewById(R.id.teamturnname);
+		turnNumberTV= (TextView) findViewById(R.id.turnnumber);
+		reRollsTV= (TextView) findViewById(R.id.rerolls);
+		TimerTV= (TextView) findViewById(R.id.timer);
 
-    @Override
-	public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+		allButtons[0] = kickOffButton = (Button) findViewById(R.id.kickoff);
+		allButtons[1] = pickUpButton = (Button) findViewById(R.id.pickup);
+		allButtons[2] = blockButton = (Button) findViewById(R.id.block);
+		allButtons[3] = throwInButton = (Button) findViewById(R.id.throwin);
+		allButtons[4] = passButton = (Button) findViewById(R.id.pass);
+		allButtons[5] = interceptButton = (Button) findViewById(R.id.intercept);
+		allButtons[6] = dodgeButton = (Button) findViewById(R.id.dodge);
+		allButtons[7] = endTurnButton = (Button) findViewById(R.id.endturn);
+		
 
-        switch (position) {
-            case 0:
-				dice = new Dice(6,this);
-                break;
-            case 1:
-                dice = new Dice("Block",this);
-                break;
-            case 2:
-                dice = new Dice(8,this);
-                break;
-			case 3:
-                dice = new Dice("Injury",this);
-                break;
-			case 4:
-                dice = new Dice("Serious Injury",this);
-                break;
-        }
-    }
-	@Override
-	public void onNothingSelected(AdapterView<?> p1)
-	{
-		// TODO: Implement this method
+		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
+	}
+	private void tidyUpLayout(){
+		endTurnButton.post(new Runnable() {
+				@Override
+				public void run() {
+					int universalPanelWidth = 0;
+
+					for (int i = 0; i < 8; i++){
+						Log.d("Panel Resizer","Universal Width: " + universalPanelWidth + " Current Button: " + allButtons[i].getWidth());
+						if (allButtons[i].getWidth() > universalPanelWidth){
+							universalPanelWidth = allButtons[i].getWidth() ;	
+						}
+					}
+					for (int i = 0; i < 8; i++){
+						Log.d("Panel Resizer","Setting Button To: " + universalPanelWidth);
+
+						allButtons[i].setWidth(universalPanelWidth);
+					}
+				}
+			});
 	}
 
 }

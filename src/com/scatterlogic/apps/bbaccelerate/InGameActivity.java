@@ -26,7 +26,7 @@ public class InGameActivity extends Activity
 		assignXMLComponentsToVariables();
 		tidyUpLayout();
 		
-		teamNames = new String[] {"Team 1", "Team 2"};
+		teamNames = new String[] {"Innocent Guns", "Team 2"};
 		turnNumber = 0;
 		
 		teamWhoseTurnItIsTV.setText(teamNames[0]);
@@ -42,11 +42,11 @@ public class InGameActivity extends Activity
 					dieOne.setImageDrawable(null);
 					dieThree.setImageDrawable(null);
 				}
-			});
+		});
 		*/
 		
 		for(int i = 1; i<10;i++){
-			actionLogPanel.addView(new gameEventPanel("Title","Info","",this,R.color.deepgreen,R.color.white,R.color.green,R.color.black).EventPanel);
+			actionLogPanel.addView(new gameEventPanel("Title","Info","Doh,Ray,Me",this,R.color.deepgreen,R.color.white,R.color.green,R.color.black).EventPanel);
 			actionLogPanel.addView(new gameEventPanel("Title2","Info","",this,R.color.deepblue,R.color.white,R.color.blue,R.color.white).EventPanel);
 			actionLogPanel.addView(new gameEventPanel("Title3","Info","",this,R.color.deepred,R.color.white,R.color.red,R.color.white).EventPanel);
 			actionLogPanel.addView(new gameEventPanel("Title4","Info","",this,R.color.purple,R.color.white,R.color.bluegrey,R.color.black).EventPanel);

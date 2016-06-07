@@ -13,7 +13,9 @@ public class gameEventPanel
 	LinearLayout EventPanel;
 	String feedback;
 	boolean resolved;
-	
+	TextView infoPanel, titleBar;
+	String buttons[];
+	int i;
 	
 	public gameEventPanel(String title, String info, String csQuestions, Context context, 
 			int titleBG, int titleText, int infoBG, int infoText){
@@ -24,13 +26,13 @@ public class gameEventPanel
 		EventPanel.setOrientation(LinearLayout.VERTICAL);
 		EventPanel.setLayoutParams(widthOfView);
 		
-		TextView titleBar = new TextView(context);
+		titleBar = new TextView(context);
 		titleBar.setBackgroundResource(titleBG);
 		titleBar.setTextColor(context.getResources().getColor(titleText));
 		titleBar.setTypeface(null,Typeface.BOLD);
 		titleBar.setGravity(Gravity.CENTER);
 		
-		TextView infoPanel = new TextView(context);
+		infoPanel = new TextView(context);
 		infoPanel.setBackgroundResource(infoBG);
 		infoPanel.setTextColor(context.getResources().getColor(infoText));
 		
@@ -43,11 +45,31 @@ public class gameEventPanel
 		
 		EventPanel.addView(titleBar);
 		EventPanel.addView(infoPanel);
-		//split buttons to array
-		//loop array until buttons established
-		//add listeners to buttons
-		//set outputText when pressed and replace all buttons with text view of selection.
-		
+		if (csQuestions.length() >= 1){
+			//split buttons to array
+			buttons = csQuestions.split(",");
+			Button[] csqButtons = new Button[csQuestions.length()];
+			//loop array until buttons established
+			LinearLayout buttonPanel = new LinearLayout(context);		
+			buttonPanel.setOrientation(LinearLayout.HORIZONTAL);
+			buttonPanel.setLayoutParams(widthOfView);
+			
+			for (i = 0; i < buttons.length; i++){
+				csqButtons[i] = new Button(context);
+				csqButtons[i].setText(buttons[i]);
+				csqButtons[i].setLayoutParams(widthOfView);
+				buttonPanel.addView(csqButtons[i]);
+				final String buttonName = buttons[i];
+  				csqButtons[i].setOnClickListener(new View.OnClickListener() {
+					public void onClick(View v) {
+					  infoPanel.setText("Clicked " + buttonName);
+		  			}
+	  			});
+			}
+			
+			//set outputText when pressed and replace all buttons with text view of selection.
+			EventPanel.addView(buttonPanel);
+		}
 		
 	}
 	public String getFeedback(){

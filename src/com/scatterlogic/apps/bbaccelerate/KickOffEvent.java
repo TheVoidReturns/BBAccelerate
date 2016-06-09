@@ -1,5 +1,6 @@
 package com.scatterlogic.apps.bbaccelerate;
 import android.content.*;
+import android.util.Log;
 import android.widget.*;
 import android.os.*;
 
@@ -12,6 +13,7 @@ public class KickOffEvent
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		this.actionLogPanel = actionLogPanel;
 		actionLogPanel.addView(test.getPanel());
+		Log.d("LoopCheck", test.getFeedback());
 	}
 	public LinearLayout getALogPanel()
 	{

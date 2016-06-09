@@ -1,5 +1,4 @@
 package com.scatterlogic.apps.bbaccelerate;
-import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.*;
 import android.text.*;
@@ -8,9 +7,11 @@ import android.content.*;
 import android.widget.TableLayout.*;
 import android.graphics.*;
 import android.view.*;
+import java.util.Observable;
+import java.util.Scanner;
 
 
-public class gameEventPanel extends AsyncTask
+public class gameEventPanel extends Observable implements Runnable
 {
 	LinearLayout EventPanel,buttonPanel;
 	String feedback;
@@ -75,16 +76,26 @@ public class gameEventPanel extends AsyncTask
 		  			}
 	  			});
 			}
-			awaitResponse(csqButtons[buttons.length-1]);
-
 			//set outputText when pressed and replace all buttons with text view of selection.
 			EventPanel.addView(buttonPanel);
 		}
 		
 	}
 	public String getFeedback(){
+		Thread t = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				//while (feedback.equalsIgnoreCase(""));
+			}
+		});
 
-		this.doInBackground();
+		t.start();
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		Log.d("Feedback", "Feeding back " + feedback);
 		return feedback;
 	}
@@ -92,17 +103,12 @@ public class gameEventPanel extends AsyncTask
 		return EventPanel;
 	}
 
-	private void awaitResponse(Button button){
-		button.post(new Runnable() {
-			@Override
-			public void run() {
-			}
-		});
-	}
-
-	@Override
-	protected String doInBackground(Object[] params) {
-		while (feedback.equalsIgnoreCase(""));
-		return feedback;
-	}
+    @Override
+    public void run() {
+        while(true){
+            String response = feedback;
+            resolved = true;
+            notifyObservers(response);
+        }
+    }
 }

@@ -17,7 +17,7 @@ public class gameEventPanel
 	TextView infoPanel, titleBar;
 	String buttons[];
 	int i;
-	
+
 	public gameEventPanel(String title, String info, String csQuestions, Context context, 
 			int titleBG, int titleText, int infoBG, int infoText){
 
@@ -75,13 +75,14 @@ public class gameEventPanel
 	  			});
 			}
 			awaitResponse(csqButtons[buttons.length-1]);
-			
+
 			//set outputText when pressed and replace all buttons with text view of selection.
 			EventPanel.addView(buttonPanel);
 		}
 		
 	}
 	public String getFeedback(){
+		while (feedback.equalsIgnoreCase(""));
 		return feedback;
 	}
 	public LinearLayout getPanel(){
@@ -89,10 +90,10 @@ public class gameEventPanel
 	}
 
 	private void awaitResponse(Button button){
+		Log.d("In Post", "Entering loop");
 		button.post(new Runnable() {
 			@Override
 			public void run() {
-				while (feedback.equalsIgnoreCase(""));
 			}
 		});
 	}

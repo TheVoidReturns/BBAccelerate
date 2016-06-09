@@ -13,10 +13,10 @@ public class KickOffEvent
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		this.actionLogPanel = actionLogPanel;
 		actionLogPanel.addView(test.getPanel());
-		Log.d("LoopCheck", test.getFeedback());
 	}
 	public LinearLayout getALogPanel()
 	{
 		return actionLogPanel;
 	}
+
 }

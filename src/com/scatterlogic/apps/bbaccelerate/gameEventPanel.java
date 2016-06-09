@@ -82,7 +82,20 @@ public class gameEventPanel
 		
 	}
 	public String getFeedback(){
-		while (feedback.equalsIgnoreCase(""));
+		Thread t = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while (feedback.equalsIgnoreCase(""));
+			}
+		});
+
+		t.start();
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		return feedback;
 	}
 	public LinearLayout getPanel(){
@@ -90,7 +103,6 @@ public class gameEventPanel
 	}
 
 	private void awaitResponse(Button button){
-		Log.d("In Post", "Entering loop");
 		button.post(new Runnable() {
 			@Override
 			public void run() {

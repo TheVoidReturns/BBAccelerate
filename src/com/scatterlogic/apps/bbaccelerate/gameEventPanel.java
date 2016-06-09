@@ -1,4 +1,5 @@
 package com.scatterlogic.apps.bbaccelerate;
+import android.util.Log;
 import android.widget.*;
 import android.text.*;
 import android.app.*;
@@ -73,6 +74,7 @@ public class gameEventPanel
 		  			}
 	  			});
 			}
+			awaitResponse(csqButtons[buttons.length-1]);
 			
 			//set outputText when pressed and replace all buttons with text view of selection.
 			EventPanel.addView(buttonPanel);
@@ -84,5 +86,14 @@ public class gameEventPanel
 	}
 	public LinearLayout getPanel(){
 		return EventPanel;
+	}
+
+	private void awaitResponse(Button button){
+		button.post(new Runnable() {
+			@Override
+			public void run() {
+				while (feedback.equalsIgnoreCase(""));
+			}
+		});
 	}
 }

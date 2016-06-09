@@ -10,7 +10,7 @@ import android.view.*;
 
 public class gameEventPanel
 {
-	LinearLayout EventPanel;
+	LinearLayout EventPanel,buttonPanel;
 	String feedback;
 	boolean resolved;
 	TextView infoPanel, titleBar;
@@ -41,7 +41,11 @@ public class gameEventPanel
 		
 		titleBar.setText(title);
 		infoPanel.setText(info);
-		feedback = "Info only";
+		if (csQuestions.length() <= 0){
+			feedback = "Info only";
+		} else {
+			feedback = "";
+		}
 		
 		EventPanel.addView(titleBar);
 		EventPanel.addView(infoPanel);
@@ -50,7 +54,7 @@ public class gameEventPanel
 			buttons = csQuestions.split(",");
 			Button[] csqButtons = new Button[csQuestions.length()];
 			//loop array until buttons established
-			LinearLayout buttonPanel = new LinearLayout(context);		
+			buttonPanel = new LinearLayout(context);		
 			buttonPanel.setOrientation(LinearLayout.HORIZONTAL);
 			buttonPanel.setLayoutParams(widthOfView);
 			
@@ -62,7 +66,10 @@ public class gameEventPanel
 				final String buttonName = buttons[i];
   				csqButtons[i].setOnClickListener(new View.OnClickListener() {
 					public void onClick(View v) {
-					  infoPanel.setText("Clicked " + buttonName);
+					  infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);
+					  feedback = buttonName;
+					  EventPanel.removeView(buttonPanel);
+					  resolved = true;
 		  			}
 	  			});
 			}
@@ -74,5 +81,8 @@ public class gameEventPanel
 	}
 	public String getFeedback(){
 		return feedback;
+	}
+	public LinearLayout getPanel(){
+		return EventPanel;
 	}
 }

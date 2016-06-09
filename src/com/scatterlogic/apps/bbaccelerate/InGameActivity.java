@@ -44,14 +44,6 @@ public class InGameActivity extends Activity
 				}
 		});
 		*/
-		
-		for(int i = 1; i<10;i++){
-			actionLogPanel.addView(new gameEventPanel("Title","Info","Doh,Ray,Me",this,R.color.deepgreen,R.color.white,R.color.green,R.color.black).EventPanel);
-			actionLogPanel.addView(new gameEventPanel("Title2","Info","",this,R.color.deepblue,R.color.white,R.color.blue,R.color.white).EventPanel);
-			actionLogPanel.addView(new gameEventPanel("Title3","Info","",this,R.color.deepred,R.color.white,R.color.red,R.color.white).EventPanel);
-			actionLogPanel.addView(new gameEventPanel("Title4","Info","",this,R.color.purple,R.color.white,R.color.bluegrey,R.color.black).EventPanel);
-			actionLogPanel.addView(new gameEventPanel("Title5","Info","",this,R.color.yellow,R.color.white,R.color.bluegrey,R.color.black).EventPanel);
-		}
 	}
 
 	@Override
@@ -90,6 +82,11 @@ public class InGameActivity extends Activity
 		allButtons[6] = dodgeButton = (Button) findViewById(R.id.dodge);
 		allButtons[7] = endTurnButton = (Button) findViewById(R.id.endturn);
 		
+		kickOffButton.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					new KickOffEvent(getApplicationContext(),actionLogPanel);
+				}
+			});
 
 		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
 	}

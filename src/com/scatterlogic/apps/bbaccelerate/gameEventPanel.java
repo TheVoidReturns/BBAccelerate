@@ -96,6 +96,7 @@ public class gameEventPanel
 			e.printStackTrace();
 		}
 
+		Log.d("Feedback", "Feeding back " + feedback);
 		return feedback;
 	}
 	public LinearLayout getPanel(){

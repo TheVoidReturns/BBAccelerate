@@ -1,4 +1,5 @@
 package com.scatterlogic.apps.bbaccelerate;
+import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.*;
 import android.text.*;
@@ -9,7 +10,7 @@ import android.graphics.*;
 import android.view.*;
 
 
-public class gameEventPanel
+public class gameEventPanel extends AsyncTask
 {
 	LinearLayout EventPanel,buttonPanel;
 	String feedback;
@@ -82,20 +83,8 @@ public class gameEventPanel
 		
 	}
 	public String getFeedback(){
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while (feedback.equalsIgnoreCase(""));
-			}
-		});
 
-		t.start();
-		try {
-			t.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
+		this.doInBackground();
 		Log.d("Feedback", "Feeding back " + feedback);
 		return feedback;
 	}
@@ -109,5 +98,11 @@ public class gameEventPanel
 			public void run() {
 			}
 		});
+	}
+
+	@Override
+	protected String doInBackground(Object[] params) {
+		while (feedback.equalsIgnoreCase(""));
+		return feedback;
 	}
 }

@@ -10,6 +10,7 @@ import java.util.*;
 public class KickOffEvent
 {
 	LinearLayout actionLogPanel,buttonPanel;
+	Context c;
 	ScrollView scroller;
 	gameEventPanel currentPanel;
 	Thread backgroundThread;
@@ -23,7 +24,10 @@ public class KickOffEvent
 		actionLogPanel = alPanel;
 		buttonPanel = bPanel;
 		scroller = s;
-		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
+		startKickOff();
+	}
+	public void startKickOff(){
+		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", c,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		csqButtons = currentPanel.getButtons();
 		Log.d("KickOffEvent", "Got " + csqButtons.length + " buttons.");

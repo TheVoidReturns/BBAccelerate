@@ -11,7 +11,7 @@ import java.util.Observable;
 import java.util.Scanner;
 
 
-public class gameEventPanel extends Observable implements Runnable
+public class gameEventPanel extends Observable
 {
 	LinearLayout EventPanel,buttonPanel;
 	String feedback;
@@ -71,8 +71,11 @@ public class gameEventPanel extends Observable implements Runnable
 					public void onClick(View v) {
 					  infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);
 					  feedback = buttonName;
+					  hasChanged();
 					  EventPanel.removeView(buttonPanel);
 					  resolved = true;
+					  notifyObservers(feedback);
+					  Log.d("Feedback", "Feeding back " + feedback);
 		  			}
 	  			});
 			}
@@ -82,33 +85,15 @@ public class gameEventPanel extends Observable implements Runnable
 		
 	}
 	public String getFeedback(){
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				//while (feedback.equalsIgnoreCase(""));
-			}
-		});
-
-		t.start();
-		try {
-			t.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		Log.d("Feedback", "Feeding back " + feedback);
+		Log.d("getFeedback","Feedback requested");
 		return feedback;
 	}
 	public LinearLayout getPanel(){
 		return EventPanel;
 	}
 
-    @Override
-    public void run() {
-        while(true){
-            String response = feedback;
-            resolved = true;
-            notifyObservers(response);
-        }
-    }
+	public void addObserver()
+	{
+ 	// TODO: Implement this method
+	}
 }

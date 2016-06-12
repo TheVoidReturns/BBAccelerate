@@ -3,36 +3,30 @@ import android.content.*;
 import android.util.Log;
 import android.widget.*;
 import android.os.*;
+import java.util.Observable;
+import java.util.*;
 
-public class KickOffEvent
+public class KickOffEvent implements Observer
 {
 	LinearLayout actionLogPanel;
+	gameEventPanel currentPanel;
 
 	public KickOffEvent(Context context, LinearLayout actionLogPanel) {
-		gameEventPanel test = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
+		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		this.actionLogPanel = actionLogPanel;
-		actionLogPanel.addView(test.getPanel());
-		Log.d("KickOffEvent", "I can see " + test.getFeedback());
+		actionLogPanel.addView(currentPanel.getPanel());
 	}
 	public LinearLayout getALogPanel()
 	{
 		return actionLogPanel;
 	}
 
-}
-import java.util.Observable;
-		import static java.lang.System.out;
-
-class MyApp {
-	public static void main(String[] args) {
-		out.println("Enter Text >");
-		EventSource eventSource = new EventSource();
-
-		eventSource.addObserver( (Observable obj, Object arg) -> {
-			out.println("\nReceived response: " + arg);
-		});
-
-		new Thread(eventSource).start();
+	@Override
+	public void update(Observable p1, Object p2)
+	{
+		Log.d("KickOffEvent", "Got state change " + p2);
 	}
+
 }
+

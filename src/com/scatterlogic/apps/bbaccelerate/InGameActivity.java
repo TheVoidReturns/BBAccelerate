@@ -15,6 +15,7 @@ public class InGameActivity extends Activity
 	//ImageView dieOne,dieTwo,dieThree;
 	TextView teamWhoseTurnItIsTV, turnNumberTV, reRollsTV, TimerTV;
 	LinearLayout actionLogPanel,buttonPanel;
+	ScrollView scroller;
 	Dice dice;
 	Integer turnNumber;
 	@Override
@@ -84,10 +85,10 @@ public class InGameActivity extends Activity
 
 		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
 		buttonPanel = (LinearLayout) findViewById(R.id.buttonpanel);
-
+		scroller = (ScrollView) findViewById(R.id.scroller);
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel);
+					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller);
 				}
 			});
 

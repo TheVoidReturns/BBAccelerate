@@ -81,31 +81,29 @@ public class InGameActivity extends Activity
 		allButtons[5] = interceptButton = (Button) findViewById(R.id.intercept);
 		allButtons[6] = dodgeButton = (Button) findViewById(R.id.dodge);
 		allButtons[7] = endTurnButton = (Button) findViewById(R.id.endturn);
-		
+
+		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
+		buttonPanel = (LinearLayout) findViewById(R.id.buttonpanel);
+
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel);
 				}
 			});
 
-		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
-		buttonPanel = (LinearLayout) findViewById(R.id.buttonpanel);
+
 	}
 	private void tidyUpLayout(){
 		endTurnButton.post(new Runnable() {
 				@Override
 				public void run() {
 					int universalPanelWidth = 0;
-
 					for (int i = 0; i < 8; i++){
-						Log.d("Panel Resizer","Universal Width: " + universalPanelWidth + " Current Button: " + allButtons[i].getWidth());
 						if (allButtons[i].getWidth() > universalPanelWidth){
 							universalPanelWidth = allButtons[i].getWidth() ;	
 						}
 					}
 					for (int i = 0; i < 8; i++){
-						Log.d("Panel Resizer","Setting Button To: " + universalPanelWidth);
-
 						allButtons[i].setWidth(universalPanelWidth);
 					}
 				}

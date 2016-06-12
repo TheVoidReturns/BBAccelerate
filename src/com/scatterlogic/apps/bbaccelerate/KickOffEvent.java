@@ -21,8 +21,8 @@ public class KickOffEvent
 		this.actionLogPanel = actionLogPanel;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
-		Button csqButtons[] = currentPanel.getButtons();
-
+		csqButtons = currentPanel.getButtons();
+		Log.d("KickOffEvent", "Got " + csqButtons.length + " buttons.");
 		for (int i = 0; i < csqButtons.length; i++) {
 			buttonPanel.addView(csqButtons[i]);
 		}

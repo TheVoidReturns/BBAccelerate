@@ -33,7 +33,7 @@ public class gameEventPanel
 		titleBar = new TextView(context);
 		titleBar.setBackgroundResource(titleBG);
 		titleBar.setTextColor(context.getResources().getColor(titleText));
-		titleBar.setTypeface(null,Typeface.BOLD);
+		titleBar.setTypeface(null, Typeface.BOLD);
 		titleBar.setGravity(Gravity.CENTER);
 
 		infoPanel = new TextView(context);
@@ -76,6 +76,7 @@ public class gameEventPanel
 		return feedback;
 	}
 	public Button[] getButtons(){
+		Log.d("getButtons","sending array of " + csqButtons.length);
 		return csqButtons;
 	}
 	public LinearLayout getPanel(){

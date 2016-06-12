@@ -95,7 +95,8 @@
 			android:layout_width="match_parent"
 			android:orientation="horizontal"
 			android:layout_weight="1"
-			android:minHeight="240dp">
+			android:minHeight="80sp"
+			android:nestedScrollingEnabled="false">
 		</LinearLayout>
 
 		<ScrollView

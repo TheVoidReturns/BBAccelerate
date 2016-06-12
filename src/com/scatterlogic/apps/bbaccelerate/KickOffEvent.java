@@ -9,33 +9,34 @@ import java.util.*;
 
 public class KickOffEvent
 {
-	LinearLayout actionLogPanel;
+	LinearLayout actionLogPanel,buttonPanel;
 	gameEventPanel currentPanel;
 	Thread backgroundThread;
 	int nextNumberToAction;
 	List <gameEventPanel> allPanels;
 	Button[] csqButtons;
+	int i;
 
-	public KickOffEvent(Context context, LinearLayout actionLogPanel, LinearLayout buttonPanel) {
+	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel) {
 
-		this.actionLogPanel = actionLogPanel;
+		actionLogPanel = alPanel;
+		buttonPanel = bPanel;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		csqButtons = currentPanel.getButtons();
 		Log.d("KickOffEvent", "Got " + csqButtons.length + " buttons.");
-		for (int i = 0; i < csqButtons.length; i++) {
-			Log.d("KickOFfLoop","Adding button " + i);
+		for (i = 0; i < csqButtons.length; i++) {
+			Log.d("KickOffLoop", "Adding button " + i);
 			buttonPanel.addView(csqButtons[i]);
+
+			csqButtons[i].setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					currentPanel.AddText("\nClicked " + csqButtons[i].getText());
+					buttonPanel.removeAllViews();
+					Log.d("Feedback", "Feeding back " + csqButtons[i].getText());
+				}
+			});
 		}
-		/*csqButtons[i].setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);
-				feedback = buttonName;
-				EventPanel.removeView(buttonPanel);
-				resolved = true;
-				Log.d("Feedback", "Feeding back " + feedback);
-			}
-		});*/
 		actionLogPanel.addView(currentPanel.getPanel());
 	}
 }

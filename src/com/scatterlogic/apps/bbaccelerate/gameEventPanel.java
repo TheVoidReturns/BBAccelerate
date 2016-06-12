@@ -68,8 +68,6 @@ public class gameEventPanel
 				csqButtons[i].setText(buttons[i]);
 				csqButtons[i].setLayoutParams(widthOfView);
 			}
-			//set outputText when pressed and replace all buttons with text view of selection.
-			//EventPanel.addView(buttonPanel);
 		}
 		
 	}
@@ -80,6 +78,9 @@ public class gameEventPanel
 	public Button[] getButtons(){
 		Log.d("getButtons","sending array of " + csqButtons.length);
 		return csqButtons;
+	}
+	public void AddText(String additionalText){
+		infoPanel.setText(infoPanel.getText() + "\nClicked " + additionalText);
 	}
 	public LinearLayout getPanel(){
 		return EventPanel;

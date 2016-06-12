@@ -31,9 +31,9 @@ public class KickOffEvent
 
 			csqButtons[i].setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
+					Log.d("Feedback", "Feeding back " + v.toString());
 					currentPanel.AddText("\nClicked " + csqButtons[i].getText());
 					buttonPanel.removeAllViews();
-					Log.d("Feedback", "Feeding back " + csqButtons[i].getText());
 				}
 			});
 		}

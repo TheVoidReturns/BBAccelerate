@@ -11,7 +11,6 @@ public class KickOffEvent
 {
 	LinearLayout actionLogPanel,buttonPanel;
 	Context c;
-	ScrollView scroller;
 	gameEventPanel currentPanel;
 	Thread backgroundThread;
 	int nextNumberToAction;
@@ -19,11 +18,10 @@ public class KickOffEvent
 	Button[] csqButtons;
 	int i;
 
-	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel,ScrollView s) {
+	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel) {
 
 		actionLogPanel = alPanel;
 		buttonPanel = bPanel;
-		scroller = s;
 		c = context;
 		startKickOff();
 	}
@@ -38,12 +36,10 @@ public class KickOffEvent
 
 			csqButtons[i].setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 					Button castIn = (Button) v;
 					Log.d("Feedback", "Feeding back " + castIn.getText());
 					currentPanel.AddText("\nClicked " + castIn.getText());
 					buttonPanel.removeAllViews();
-					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 				}
 			});
 		}

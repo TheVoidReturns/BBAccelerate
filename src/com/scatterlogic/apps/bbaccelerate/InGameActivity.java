@@ -86,6 +86,12 @@ public class InGameActivity extends Activity
 		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
 		buttonPanel = (LinearLayout) findViewById(R.id.buttonpanel);
 		scroller = (ScrollView) findViewById(R.id.scroller);
+		scroller.post(new Runnable() {
+			@Override
+			public void run() {
+				scroller.fullScroll(View.FOCUS_DOWN);
+			}
+		});
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					scroller.fullScroll(ScrollView.FOCUS_DOWN);

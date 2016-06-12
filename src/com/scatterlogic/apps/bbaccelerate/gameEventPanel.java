@@ -60,7 +60,7 @@ public class gameEventPanel
 			//split buttons to array
 			buttons = csQuestions.split(",");
 			Log.d("Pre Loop","We got " + buttons.length + " buttons passed");
-			csqButtons = new Button[csQuestions.length()];
+			csqButtons = new Button[buttons.length];
 			//loop array until buttons established
 			for (i = 0; i < buttons.length; i++) {
 				Log.d("In Loop", "Adding button " + buttons[i]);

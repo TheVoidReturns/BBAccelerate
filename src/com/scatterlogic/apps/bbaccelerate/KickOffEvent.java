@@ -10,6 +10,7 @@ import java.util.*;
 public class KickOffEvent
 {
 	LinearLayout actionLogPanel,buttonPanel;
+	ScrollView scroller;
 	gameEventPanel currentPanel;
 	Thread backgroundThread;
 	int nextNumberToAction;
@@ -17,10 +18,11 @@ public class KickOffEvent
 	Button[] csqButtons;
 	int i;
 
-	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel) {
+	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel,ScrollView s) {
 
 		actionLogPanel = alPanel;
 		buttonPanel = bPanel;
+		scroller = s;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 		csqButtons = currentPanel.getButtons();
@@ -34,6 +36,7 @@ public class KickOffEvent
 					Button castIn = (Button) v;
 					Log.d("Feedback", "Feeding back " + castIn.getText());
 					currentPanel.AddText("\nClicked " + castIn.getText());
+					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 					buttonPanel.removeAllViews();
 				}
 			});

@@ -25,17 +25,7 @@ public class KickOffEvent
 		buttonPanel = bPanel;
 		c = context;
 		s = scrollView;
-		s.post(new Runnable() {
-			@Override
-			public void run() {
-				// This method works but animates the scrolling
-				// which looks weird on first load
-				// scroll_view.fullScroll(View.FOCUS_DOWN);
-
-				// This method works even better because there are no animations.
-				s.scrollTo(0, s.getBottom());
-			}
-		});
+		tidyUp();
 		startKickOff();
 	}
 	public void startKickOff(){
@@ -53,11 +43,24 @@ public class KickOffEvent
 					Log.d("Feedback", "Feeding back " + castIn.getText());
 					currentPanel.AddText("\nClicked " + castIn.getText());
 					buttonPanel.removeAllViews();
-					s.fullScroll(ScrollView.FOCUS_DOWN);
+					tidyUp();
 				}
 			});
 		}
 		actionLogPanel.addView(currentPanel.getPanel());
+	}
+	public void tidyUp(){
+		s.post(new Runnable() {
+			@Override
+			public void run() {
+				// This method works but animates the scrolling
+				// which looks weird on first load
+				// scroll_view.fullScroll(View.FOCUS_DOWN);
+
+				// This method works even better because there are no animations.
+				s.scrollTo(0, s.getBottom());
+			}
+		});
 	}
 }
 

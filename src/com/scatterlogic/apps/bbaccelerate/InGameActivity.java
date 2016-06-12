@@ -95,7 +95,7 @@ public class InGameActivity extends Activity
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					scroller.fullScroll(ScrollView.FOCUS_DOWN);
-					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller);
+					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel);
 					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 				}
 			});

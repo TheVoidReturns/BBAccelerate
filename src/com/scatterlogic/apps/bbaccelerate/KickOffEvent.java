@@ -48,6 +48,7 @@ public class KickOffEvent
 			});
 		}
 		actionLogPanel.addView(currentPanel.getPanel());
+		tidyUp();
 	}
 	public void tidyUp(){
 		s.post(new Runnable() {

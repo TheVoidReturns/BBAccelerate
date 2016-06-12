@@ -16,7 +16,7 @@ public class KickOffEvent
 	List <gameEventPanel> allPanels;
 	Button[] csqButtons;
 
-	public KickOffEvent(Context context, LinearLayout actionLogPanel) {
+	public KickOffEvent(Context context, LinearLayout actionLogPanel, LinearLayout buttonPanel) {
 
 		this.actionLogPanel = actionLogPanel;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,

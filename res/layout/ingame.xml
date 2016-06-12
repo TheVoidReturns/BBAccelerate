@@ -101,6 +101,13 @@
 				android:layout_width="match_parent">
 			</LinearLayout>
 		</ScrollView>
+		<LinearLayout
+			android:id="@+id/buttonpanel"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_weight="4">
+		</LinearLayout>
 	</LinearLayout>
 
 	<LinearLayout

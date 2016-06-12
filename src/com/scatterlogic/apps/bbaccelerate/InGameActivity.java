@@ -14,7 +14,7 @@ public class InGameActivity extends Activity
 	interceptButton, dodgeButton,endTurnButton;
 	//ImageView dieOne,dieTwo,dieThree;
 	TextView teamWhoseTurnItIsTV, turnNumberTV, reRollsTV, TimerTV;
-	LinearLayout actionLogPanel;
+	LinearLayout actionLogPanel,buttonPanel;
 	Dice dice;
 	Integer turnNumber;
 	@Override
@@ -84,11 +84,12 @@ public class InGameActivity extends Activity
 		
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel);
+					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel);
 				}
 			});
 
 		actionLogPanel = (LinearLayout) findViewById(R.id.gamelogpanel);
+		buttonPanel = (LinearLayout) findViewById(R.id.buttonpanel);
 	}
 	private void tidyUpLayout(){
 		endTurnButton.post(new Runnable() {

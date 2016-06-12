@@ -69,7 +69,7 @@ public class gameEventPanel
 				final String buttonName = buttons[i];
 			}
 			//set outputText when pressed and replace all buttons with text view of selection.
-			EventPanel.addView(buttonPanel);
+			//EventPanel.addView(buttonPanel);
 		}
 		
 	}

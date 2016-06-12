@@ -21,7 +21,11 @@ public class KickOffEvent
 		this.actionLogPanel = actionLogPanel;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
+		Button csqButtons[] = currentPanel.getButtons();
 
+		for (int i = 0; i < csqButtons.length; i++) {
+			buttonPanel.addView(csqButtons[i]);
+		}
 		/*csqButtons[i].setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);

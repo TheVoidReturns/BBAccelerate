@@ -63,6 +63,7 @@ public class gameEventPanel
 			csqButtons = new Button[csQuestions.length()];
 			//loop array until buttons established
 			for (i = 0; i < buttons.length; i++) {
+				Log.d("In Loop", "Adding button " + buttons[i]);
 				csqButtons[i] = new Button(context);
 				csqButtons[i].setText(buttons[i]);
 				csqButtons[i].setLayoutParams(widthOfView);

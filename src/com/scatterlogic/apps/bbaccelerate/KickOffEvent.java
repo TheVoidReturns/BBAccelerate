@@ -38,11 +38,12 @@ public class KickOffEvent
 
 			csqButtons[i].setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
+					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 					Button castIn = (Button) v;
 					Log.d("Feedback", "Feeding back " + castIn.getText());
 					currentPanel.AddText("\nClicked " + castIn.getText());
-					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 					buttonPanel.removeAllViews();
+					scroller.fullScroll(ScrollView.FOCUS_DOWN);
 				}
 			});
 		}

@@ -91,20 +91,16 @@
 			android:gravity="center"/>
 
 		<ScrollView
-			android:layout_height="match_parent"
-			android:layout_width="match_parent"
-			android:fillViewport="false"
-			android:layout_weight="1"
-			android:id="@+id/gamelogpanel">
-		</ScrollView>
-
-		<LinearLayout
-			android:id="@+id/questionbuttons"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="bottom"
-			android:weightSum="1"></LinearLayout>
+			android:layout_width="match_parent">
+
+			<LinearLayout
+				android:id="@+id/gamelogpanel"
+				android:orientation="vertical"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent">
+			</LinearLayout>
+		</ScrollView>
 	</LinearLayout>
 
 	<LinearLayout

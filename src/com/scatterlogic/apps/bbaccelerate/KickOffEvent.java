@@ -24,6 +24,7 @@ public class KickOffEvent
 		csqButtons = currentPanel.getButtons();
 		Log.d("KickOffEvent", "Got " + csqButtons.length + " buttons.");
 		for (int i = 0; i < csqButtons.length; i++) {
+			Log.d("KickOFfLoop","Adding button " + i);
 			buttonPanel.addView(csqButtons[i]);
 		}
 		/*csqButtons[i].setOnClickListener(new View.OnClickListener() {

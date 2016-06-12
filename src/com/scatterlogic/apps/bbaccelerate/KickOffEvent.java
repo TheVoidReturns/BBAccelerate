@@ -1,32 +1,37 @@
 package com.scatterlogic.apps.bbaccelerate;
 import android.content.*;
 import android.util.Log;
+import android.view.View;
 import android.widget.*;
 import android.os.*;
 import java.util.Observable;
 import java.util.*;
 
-public class KickOffEvent implements Observer
+public class KickOffEvent
 {
 	LinearLayout actionLogPanel;
 	gameEventPanel currentPanel;
+	Thread backgroundThread;
+	int nextNumberToAction;
+	List <gameEventPanel> allPanels;
+	Button[] csqButtons;
 
 	public KickOffEvent(Context context, LinearLayout actionLogPanel) {
+
+		this.actionLogPanel = actionLogPanel;
 		currentPanel = new gameEventPanel("Kick Off", "Get the Ref!", "Kill Ref,Spare Ref", context,
 				R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
-		this.actionLogPanel = actionLogPanel;
+
+		/*csqButtons[i].setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);
+				feedback = buttonName;
+				EventPanel.removeView(buttonPanel);
+				resolved = true;
+				Log.d("Feedback", "Feeding back " + feedback);
+			}
+		});*/
 		actionLogPanel.addView(currentPanel.getPanel());
 	}
-	public LinearLayout getALogPanel()
-	{
-		return actionLogPanel;
-	}
-
-	@Override
-	public void update(Observable p1, Object p2)
-	{
-		Log.d("KickOffEvent", "Got state change " + p2);
-	}
-
 }
 

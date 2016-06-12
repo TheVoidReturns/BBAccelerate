@@ -11,13 +11,14 @@ import java.util.Observable;
 import java.util.Scanner;
 
 
-public class gameEventPanel extends Observable
+public class gameEventPanel
 {
 	LinearLayout EventPanel,buttonPanel;
 	String feedback;
 	boolean resolved;
 	TextView infoPanel, titleBar;
 	String buttons[];
+	Button[] csqButtons;
 	int i;
 
 	public gameEventPanel(String title, String info, String csQuestions, Context context, 
@@ -55,29 +56,17 @@ public class gameEventPanel extends Observable
 		if (csQuestions.length() >= 1){
 			//split buttons to array
 			buttons = csQuestions.split(",");
-			Button[] csqButtons = new Button[csQuestions.length()];
+			csqButtons = new Button[csQuestions.length()];
 			//loop array until buttons established
 			buttonPanel = new LinearLayout(context);		
 			buttonPanel.setOrientation(LinearLayout.HORIZONTAL);
 			buttonPanel.setLayoutParams(widthOfView);
-			
-			for (i = 0; i < buttons.length; i++){
+			for (i = 0; i < buttons.length; i++) {
 				csqButtons[i] = new Button(context);
 				csqButtons[i].setText(buttons[i]);
 				csqButtons[i].setLayoutParams(widthOfView);
 				buttonPanel.addView(csqButtons[i]);
 				final String buttonName = buttons[i];
-  				csqButtons[i].setOnClickListener(new View.OnClickListener() {
-					public void onClick(View v) {
-					  infoPanel.setText(infoPanel.getText() +"\nClicked " + buttonName);
-					  feedback = buttonName;
-					  hasChanged();
-					  EventPanel.removeView(buttonPanel);
-					  resolved = true;
-					  notifyObservers(feedback);
-					  Log.d("Feedback", "Feeding back " + feedback);
-		  			}
-	  			});
 			}
 			//set outputText when pressed and replace all buttons with text view of selection.
 			EventPanel.addView(buttonPanel);
@@ -88,12 +77,10 @@ public class gameEventPanel extends Observable
 		Log.d("getFeedback","Feedback requested");
 		return feedback;
 	}
+	public Button[] getButtons(){
+		return csqButtons;
+	}
 	public LinearLayout getPanel(){
 		return EventPanel;
-	}
-
-	public void addObserver()
-	{
- 	// TODO: Implement this method
 	}
 }

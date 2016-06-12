@@ -117,6 +117,7 @@ public class InGameActivity extends Activity
 					}
 				}
 			});
+		scroller.fullScroll(ScrollView.FOCUS_DOWN);
 	}
 
 }

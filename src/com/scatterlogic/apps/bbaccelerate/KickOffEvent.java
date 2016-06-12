@@ -11,6 +11,7 @@ public class KickOffEvent
 {
 	LinearLayout actionLogPanel,buttonPanel;
 	Context c;
+	ScrollView s;
 	gameEventPanel currentPanel;
 	Thread backgroundThread;
 	int nextNumberToAction;
@@ -18,11 +19,23 @@ public class KickOffEvent
 	Button[] csqButtons;
 	int i;
 
-	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel) {
+	public KickOffEvent(Context context, LinearLayout alPanel, LinearLayout bPanel, ScrollView scrollView) {
 
 		actionLogPanel = alPanel;
 		buttonPanel = bPanel;
 		c = context;
+		s = scrollView;
+		s.post(new Runnable() {
+			@Override
+			public void run() {
+				// This method works but animates the scrolling
+				// which looks weird on first load
+				// scroll_view.fullScroll(View.FOCUS_DOWN);
+
+				// This method works even better because there are no animations.
+				s.scrollTo(0, s.getBottom());
+			}
+		});
 		startKickOff();
 	}
 	public void startKickOff(){
@@ -40,6 +53,7 @@ public class KickOffEvent
 					Log.d("Feedback", "Feeding back " + castIn.getText());
 					currentPanel.AddText("\nClicked " + castIn.getText());
 					buttonPanel.removeAllViews();
+					s.fullScroll(ScrollView.FOCUS_DOWN);
 				}
 			});
 		}

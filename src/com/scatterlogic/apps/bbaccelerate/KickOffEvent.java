@@ -24,6 +24,7 @@ public class KickOffEvent
 		actionLogPanel = alPanel;
 		buttonPanel = bPanel;
 		scroller = s;
+		c = context;
 		startKickOff();
 	}
 	public void startKickOff(){

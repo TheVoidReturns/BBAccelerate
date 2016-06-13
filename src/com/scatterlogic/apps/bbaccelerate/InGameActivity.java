@@ -29,22 +29,13 @@ public class InGameActivity extends Activity
 		
 		teamNames = new String[] {"Innocent Guns", "Team 2"};
 		turnNumber = 0;
-		
+
+		PreMatchEvent preMatchEvent = new PreMatchEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,1,1,"Innocent Guns","Ridley Trott's Glade Runners");
+
 		teamWhoseTurnItIsTV.setText(teamNames[0]);
 		turnNumberTV.setText("Turn\n"+turnNumber);
-		/*
-		rollOne = (Button) findViewById(R.id.roll1);
-		rollOne.setOnClickListener(new View.OnClickListener() {
-				public void onClick(View v) {
-					feedback.setText("");
-					dice.roll();
-					feedback.setText(dice.getValueAsString());
-					dieTwo.setImageDrawable(dice.getPictureOfDie());
-					dieOne.setImageDrawable(null);
-					dieThree.setImageDrawable(null);
-				}
-		});
-		*/
+		reRollsTV.setText("4\nRerolls");
+		TimerTV.setText("02:56");
 	}
 
 	@Override

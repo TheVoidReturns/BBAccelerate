@@ -3,8 +3,6 @@ import android.content.*;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
-import android.os.*;
-import java.util.Observable;
 import java.util.*;
 
 public class KickOffEvent

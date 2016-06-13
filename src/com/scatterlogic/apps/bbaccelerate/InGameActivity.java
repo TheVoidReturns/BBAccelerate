@@ -8,6 +8,7 @@ import android.util.Log;
 
 public class InGameActivity extends Activity
 {
+
 	Button[] allButtons = new Button[8];
 	String[] teamNames;
 	Button kickOffButton, pickUpButton, blockButton, throwInButton,passButton,
@@ -22,7 +23,7 @@ public class InGameActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.ingame);
 		assignXMLComponentsToVariables();
 		tidyUpLayout();

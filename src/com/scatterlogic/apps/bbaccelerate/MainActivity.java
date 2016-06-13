@@ -14,7 +14,10 @@ public class MainActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
-		Intent myIntent = new Intent(this, InGameActivity.class);
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        Intent myIntent = new Intent(this, InGameActivity.class);
 		startActivity(myIntent);
 		
 		/*

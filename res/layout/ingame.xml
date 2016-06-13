@@ -87,7 +87,8 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
 			android:text="Large Text"
-			android:gravity="center"/>
+			android:gravity="center"
+			android:textSize="@android:dimen/app_icon_size" />
 
 		<LinearLayout
 			android:id="@+id/buttonpanel"

@@ -143,7 +143,7 @@ public class PreMatchEvent {
 
         dSix.roll();
         teamTwoFans += dSix.getValue();
-        outputString = outputString + dSix.getValue() + ", making \" + teamTwoFans + \",000 fans.\n Therefore ";
+        outputString = outputString + dSix.getValue() + ", making " + teamTwoFans + ",000 fans.\n Therefore ";
 
         if (teamOneFans > teamTwoFans*2){
             teamOneFame = 2;

@@ -26,7 +26,8 @@ android:versionName="1.0" >
     </activity>
 	<activity
         android:label="In Game"
-        android:name=".InGameActivity" >
+        android:name=".InGameActivity"
+        android:screenOrientation="landscape">
     </activity>
 </application>
 

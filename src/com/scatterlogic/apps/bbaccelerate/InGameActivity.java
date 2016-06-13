@@ -99,6 +99,7 @@ public class InGameActivity extends Activity
 					for (int i = 0; i < 8; i++){
 						allButtons[i].setWidth(universalPanelWidth);
 					}
+					turnNumberTV.setWidth(universalPanelWidth);
 				}
 			});
 		scroller.post(new Runnable() {

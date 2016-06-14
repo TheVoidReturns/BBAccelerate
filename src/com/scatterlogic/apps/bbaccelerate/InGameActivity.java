@@ -19,6 +19,7 @@ public class InGameActivity extends Activity
 	ScrollView scroller;
 	Dice dice;
 	Integer turnNumber;
+	TeamDetails teamDetails;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -27,11 +28,9 @@ public class InGameActivity extends Activity
 		setContentView(R.layout.ingame);
 		assignXMLComponentsToVariables();
 		tidyUpLayout();
-		
-		teamNames = new String[] {"Innocent Guns", "Team 2"};
-		turnNumber = 0;
+		teamDetails = new TeamDetails("Innocent Guns","Ridley Trott's Glade Runmers");
 
-		PreMatchEvent preMatchEvent = new PreMatchEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,1,1,"Innocent Guns","Ridley Trott's Glade Runners");
+		PreMatchEvent preMatchEvent = new PreMatchEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 
 		teamWhoseTurnItIsTV.setText(teamNames[0]);
 		turnNumberTV.setText("Turn\n"+turnNumber);
@@ -81,7 +80,7 @@ public class InGameActivity extends Activity
 
 		kickOffButton.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller);
+					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 				}
 			});
 

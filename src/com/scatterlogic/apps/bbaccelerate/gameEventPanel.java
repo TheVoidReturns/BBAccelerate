@@ -80,7 +80,7 @@ public class gameEventPanel
 		return csqButtons;
 	}
 	public void AddText(String additionalText){
-		infoPanel.setText(infoPanel.getText() + "\nClicked " + additionalText);
+		infoPanel.setText(infoPanel.getText() + additionalText);
 	}
 	public LinearLayout getPanel(){
 		return EventPanel;

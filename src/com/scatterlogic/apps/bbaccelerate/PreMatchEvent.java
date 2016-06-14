@@ -9,6 +9,7 @@ import android.widget.ScrollView;
 import android.widget.Switch;
 
 import java.util.List;
+import android.widget.*;
 
 public class PreMatchEvent {
 
@@ -19,18 +20,14 @@ public class PreMatchEvent {
     Button[] csqButtons;
     int i;
     int weatherNumber;
-    int teamOneFans,teamTwoFans,teamOneFame,teamTwoFame;
-    String teamOne,teamTwo;
-    public PreMatchEvent(Context context, LinearLayout alPanel, LinearLayout bPanel, ScrollView scrollView,int teamOneFF,int teamTwoFF,String teamOneName,String teamTwoName) {
+    TeamDetails teamDetails;
+    public PreMatchEvent(Context context, LinearLayout alPanel, LinearLayout bPanel, ScrollView scrollView, TeamDetails TDetails) {
         actionLogPanel = alPanel;
         buttonPanel = bPanel;
         c = context;
         s = scrollView;
         tidyUp();
-        teamOne = teamOneName;
-        teamTwo = teamTwoName;
-        teamOneFans = teamOneFF;
-        teamTwoFans = teamTwoFF;
+		teamDetails = TDetails;
         RollOnWeatherTable();
     }
 
@@ -123,6 +120,10 @@ public class PreMatchEvent {
     }
     public void WorkOutNumberOfFansAndFame(){
         String outputString;
+		String teamOne = teamDetails.teamOneName;
+		String teamTwo =teamDetails.teamTwoName;
+		int teamOneFans = teamDetails.teamOneFans;
+		int teamTwoFans = teamDetails.teamTwoFans;
         outputString = teamOne + " have " + teamOneFans + " fans and rolled a ";
         Dice dSix = new Dice(6,c);
         Log.d("Fan Counter","Team one " + teamOneFans);
@@ -146,25 +147,26 @@ public class PreMatchEvent {
         outputString = outputString + dSix.getValue() + ", making " + teamTwoFans + ",000 fans.\n Therefore ";
 
         if (teamOneFans > teamTwoFans*2){
-            teamOneFame = 2;
-            teamTwoFame = 0;
+            teamDetails.teamOneFame = 2;
+            teamDetails.teamTwoFame = 0;
             outputString = outputString + teamOne + " has many more fans than " + teamTwo + ". <FAME: 2>";
         } else if (teamTwoFans > teamOneFans*2){
-            teamOneFame = 0;
-            teamTwoFame = 2;
+            teamDetails.teamOneFame = 0;
+            teamDetails.teamTwoFame = 2;
             outputString = outputString + teamTwo + " has many more fans than " + teamOne + ". <FAME: 2>";
         } else if (teamOneFans > teamTwoFans){
-            teamOneFame = 2;
-            teamTwoFame = 0;
+            teamDetails.teamOneFame = 2;
+            teamDetails.teamTwoFame = 0;
             outputString = outputString + teamOne + " has more fans than " + teamTwo + ". <FAME: 1>";
         } else if (teamTwoFans > teamOneFans){
-            teamOneFame = 0;
-            teamTwoFame = 2;
+            teamDetails.teamOneFame = 0;
+            teamDetails.teamTwoFame = 2;
             outputString = outputString + teamTwo + " has more fans than " + teamOne + ". <FAME: 1>";
         } else {
             outputString = outputString + " both team have the same number of fans. <FAME: 0>";
         }
-
+		teamDetails.teamOneFans = teamOneFans;
+		teamDetails.teamTwoFans = teamTwoFans;
         currentPanel = new gameEventPanel("Fans and Fame",outputString, "OK", c,
                 R.color.deepgreen, R.color.white, R.color.bluegrey, R.color.black);
         csqButtons = currentPanel.getButtons();
@@ -176,6 +178,7 @@ public class PreMatchEvent {
                     Button castIn = (Button) v;
                     buttonPanel.removeAllViews();
                     tidyUp();
+					KickOffEvent KickOffEvent = new KickOffEvent(c, actionLogPanel, buttonPanel,s,teamDetails); 
                 }
             });
         }
@@ -197,16 +200,16 @@ public class PreMatchEvent {
     }
     public int getFans(int teamNumber){
         if (teamNumber == 1){
-            return teamOneFans;
+            return teamDetails.teamOneFans;
         } else {
-            return teamTwoFans;
+            return teamDetails.teamTwoFans;
         }
     }
     public int getFame(int teamNumber){
         if (teamNumber == 1){
-            return teamOneFame;
+            return teamDetails.teamOneFame;
         } else {
-            return teamTwoFame;
+            return teamDetails.teamTwoFame;
         }
     }
 }

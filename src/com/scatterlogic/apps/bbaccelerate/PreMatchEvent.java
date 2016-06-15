@@ -19,7 +19,6 @@ public class PreMatchEvent {
     gameEventPanel currentPanel;
     Button[] csqButtons;
     int i;
-    int weatherNumber;
     TeamDetails teamDetails;
     public PreMatchEvent(Context context, LinearLayout alPanel, LinearLayout bPanel, ScrollView scrollView, TeamDetails TDetails) {
         actionLogPanel = alPanel;
@@ -34,16 +33,16 @@ public class PreMatchEvent {
     public void RollOnWeatherTable(){
         Dice weatherDice = new Dice(6,c);
         String output = "Rolled a ";
-        weatherNumber = 0;
+        teamDetails.weatherScore = 0;
 
         weatherDice.roll();
-        weatherNumber = weatherNumber + weatherDice.getValue();
+        teamDetails.weatherScore = teamDetails.weatherScore + weatherDice.getValue();
         output = output + weatherDice.getValue() + " and a ";
 
         weatherDice.roll();
-        weatherNumber = weatherNumber + weatherDice.getValue();
+        teamDetails.weatherScore = teamDetails.weatherScore + weatherDice.getValue();
         output = output + weatherDice.getValue() + " which makes the weather:\n";
-        switch (weatherNumber){
+        switch (teamDetails.weatherScore){
             case 2:
                 output = output + "Sweltering Heat:\nIts so hot and humid that some players collapse from heat exhaustion. Roll a D6 FOR each player on the pitch at the end of the drive. On a roll of 1 the player collapses and may not be set up for the next kick off ";
                 break;
@@ -146,7 +145,10 @@ public class PreMatchEvent {
         teamTwoFans += dSix.getValue();
         outputString = outputString + dSix.getValue() + ", making " + teamTwoFans + ",000 fans.\n Therefore ";
 
-        if (teamOneFans > teamTwoFans*2){
+        if (teamOneFans==teamTwoFans){
+            outputString = outputString + " both team have the same number of fans. <FAME: 0>";
+        }
+        else if (teamOneFans > teamTwoFans*2){
             teamDetails.teamOneFame = 2;
             teamDetails.teamTwoFame = 0;
             outputString = outputString + teamOne + " has many more fans than " + teamTwo + ". <FAME: 2>";
@@ -155,15 +157,13 @@ public class PreMatchEvent {
             teamDetails.teamTwoFame = 2;
             outputString = outputString + teamTwo + " has many more fans than " + teamOne + ". <FAME: 2>";
         } else if (teamOneFans > teamTwoFans){
-            teamDetails.teamOneFame = 2;
+            teamDetails.teamOneFame = 1;
             teamDetails.teamTwoFame = 0;
             outputString = outputString + teamOne + " has more fans than " + teamTwo + ". <FAME: 1>";
         } else if (teamTwoFans > teamOneFans){
             teamDetails.teamOneFame = 0;
-            teamDetails.teamTwoFame = 2;
+            teamDetails.teamTwoFame = 1;
             outputString = outputString + teamTwo + " has more fans than " + teamOne + ". <FAME: 1>";
-        } else {
-            outputString = outputString + " both team have the same number of fans. <FAME: 0>";
         }
 		teamDetails.teamOneFans = teamOneFans;
 		teamDetails.teamTwoFans = teamTwoFans;

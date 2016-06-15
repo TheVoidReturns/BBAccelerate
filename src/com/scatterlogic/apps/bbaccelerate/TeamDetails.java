@@ -3,9 +3,12 @@ package com.scatterlogic.apps.bbaccelerate;
 public class TeamDetails
 {
 	String teamOneName,teamTwoName;
-	int teamOneFans,teamTwoFans,teamOneFame,teamTwoFame;
+	int teamOneFans,teamTwoFans,teamOneFame,teamTwoFame,teamOneReRolls,teamTwoRerolls,teamOneAssCoach,teamTwoAssCoach;
 	boolean isTeamOneFirstToMove;
-	
+	boolean isTeamOnesTurn;
+	int turnNumber;
+	int weatherScore;
+
 	public TeamDetails(String teamNameOne,String teamNameTwo){
 		teamOneName = teamNameOne;
 		teamTwoName = teamNameTwo;
@@ -80,5 +83,32 @@ public class TeamDetails
 	{
 		return teamTwoName;
 	}
-	
+
+	public void setTeamOneReRolls(int numberToSetTo)
+	{
+		this.teamOneReRolls = numberToSetTo;
+	}
+
+	public int getTeamOneReRolls()
+	{
+		return teamOneReRolls;
+	}
+
+	public void setTeamTwoReRolls(int numberToSetTo)
+{
+	this.teamOneReRolls = numberToSetTo;
+}
+
+	public int getTeamTwoReRolls()
+	{
+		return teamTwoRerolls;
+	}
+	public int getTurnNumber() {
+		return turnNumber;
+	}
+
+	public void setTurnNumber(int turnNumber) {
+		this.turnNumber = turnNumber;
+	}
+
 }

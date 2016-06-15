@@ -28,12 +28,12 @@ public class InGameActivity extends Activity
 		setContentView(R.layout.ingame);
 		assignXMLComponentsToVariables();
 		tidyUpLayout();
-		teamDetails = new TeamDetails("Innocent Guns","Ridley Trott's Glade Runmers");
+		teamDetails = new TeamDetails("Innocent Guns","Ridley Trott's Glade Runners");
 
 		PreMatchEvent preMatchEvent = new PreMatchEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 
-		teamWhoseTurnItIsTV.setText(teamNames[0]);
-		turnNumberTV.setText("Turn\n"+turnNumber);
+		teamWhoseTurnItIsTV.setText(teamDetails.getTeamOneName());
+		turnNumberTV.setText("Turn\n"+teamDetails.turnNumber);
 		reRollsTV.setText("4\nRerolls");
 		TimerTV.setText("02:56");
 	}

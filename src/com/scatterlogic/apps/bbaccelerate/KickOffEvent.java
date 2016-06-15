@@ -200,7 +200,7 @@ public class KickOffEvent
 						dSix.roll();
 						Log.d("Throw a rock", "Got " + dSix.getValue());
 						twoDiceSum = twoDiceSum + dSix.getValue();
-						output = output + "That player is hit with an injury roll of: " + twoDiceSum;
+						output = output + "That player is hit with an injury roll of: " + twoDiceSum + "\n";
 						output = output + teamDetails.getTeamTwoName() + " throw a rock at the opposition. Randomly select a player.\n";
 						twoDiceSum = 0;
 						dSix.roll();

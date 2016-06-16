@@ -96,7 +96,7 @@
 			android:layout_width="match_parent"
 			android:orientation="horizontal"
 			android:layout_weight="1"
-			android:minHeight="120sp"
+			android:minHeight="160sp"
 			android:nestedScrollingEnabled="false">
 		</LinearLayout>
 

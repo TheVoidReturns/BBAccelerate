@@ -1,5 +1,7 @@
 package com.scatterlogic.apps.bbaccelerate;
 
+import android.util.Log;
+
 public class TeamDetails
 {
 	String teamOneName,teamTwoName;
@@ -10,8 +12,10 @@ public class TeamDetails
 	int weatherScore;
 
 	public TeamDetails(String teamNameOne,String teamNameTwo){
+		Log.d("TeamDetails", "Making now...");
 		teamOneName = teamNameOne;
 		teamTwoName = teamNameTwo;
+		turnNumber = 0;
 	}
 
 	public void setIsTeamOneFirstToMove(boolean isTeamOneFirstToMove)

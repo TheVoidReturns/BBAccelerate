@@ -27,7 +27,42 @@ public class PreMatchEvent {
         s = scrollView;
         tidyUp();
 		teamDetails = TDetails;
-        RollOnWeatherTable();
+        TossCoin();
+    }
+    public void TossCoin(){
+        final Dice dTwo = new Dice(2,c);
+        dTwo.roll();
+        if (dTwo.getValue()==1){
+            currentPanel = new gameEventPanel("Coin Toss",teamDetails.teamOneName + " win the toss.  Attack or Defend?" , "Attack,Defend", c,
+                    R.color.deepgreen, R.color.white, R.color.bluegrey, R.color.black);
+        }else{
+            currentPanel = new gameEventPanel("Coin Toss",teamDetails.teamTwoName + " win the toss.  Attack or Defend?" , "Attack,Defend", c,
+                    R.color.deepgreen, R.color.white, R.color.bluegrey, R.color.black);
+        }
+        csqButtons = currentPanel.getButtons();
+        for (i = 0; i < csqButtons.length; i++) {
+            buttonPanel.addView(csqButtons[i]);
+
+            csqButtons[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Button castIn = (Button) v;
+                    if (castIn.getText().toString().equalsIgnoreCase("Attack")){
+                        if (dTwo.getValue()==1) teamDetails.setIsTeamOneFirstToMove(true);
+                        else teamDetails.setIsTeamOneFirstToMove(false);
+                    }
+                    if (castIn.getText().toString().equalsIgnoreCase("Defend")){
+                        if (dTwo.getValue()==1) teamDetails.setIsTeamOneFirstToMove(false);
+                        else teamDetails.setIsTeamOneFirstToMove(true);
+                    }
+                    buttonPanel.removeAllViews();
+                    tidyUp();
+                    TransferGoldFromTreasuryToPettyCash();
+                }
+            });
+        }
+
+        actionLogPanel.addView(currentPanel.getPanel());
+        tidyUp();
     }
 
     public void RollOnWeatherTable(){
@@ -178,7 +213,28 @@ public class PreMatchEvent {
                     Button castIn = (Button) v;
                     buttonPanel.removeAllViews();
                     tidyUp();
-					KickOffEvent KickOffEvent = new KickOffEvent(c, actionLogPanel, buttonPanel,s,teamDetails); 
+                    TeamSetUp();
+
+                }
+            });
+        }
+        actionLogPanel.addView(currentPanel.getPanel());
+        tidyUp();
+    }
+    public void TeamSetUp(){
+
+        currentPanel = new gameEventPanel("Set Up Teams For Kick-Off","Receiving Team First." , "OK", c,
+                R.color.deepgreen, R.color.white, R.color.bluegrey, R.color.black);
+        csqButtons = currentPanel.getButtons();
+        for (i = 0; i < csqButtons.length; i++) {
+            buttonPanel.addView(csqButtons[i]);
+
+            csqButtons[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Button castIn = (Button) v;
+                    buttonPanel.removeAllViews();
+                    tidyUp();
+                    KickOffEvent KickOffEvent = new KickOffEvent(c, actionLogPanel, buttonPanel,s,teamDetails);
                 }
             });
         }

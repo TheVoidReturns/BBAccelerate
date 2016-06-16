@@ -20,22 +20,23 @@ public class InGameActivity extends Activity
 	Dice dice;
 	Integer turnNumber;
 	TeamDetails teamDetails;
+	String currentTeam;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.ingame);
+		teamDetails = new TeamDetails("Innocent Guns","Ridley Trott's Glade Runners");
 		assignXMLComponentsToVariables();
 		tidyUpLayout();
-		teamDetails = new TeamDetails("Innocent Guns","Ridley Trott's Glade Runners");
 
 		PreMatchEvent preMatchEvent = new PreMatchEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 
-		teamWhoseTurnItIsTV.setText(teamDetails.getTeamOneName());
-		turnNumberTV.setText("Turn\n"+teamDetails.turnNumber);
-		reRollsTV.setText("4\nRerolls");
-		TimerTV.setText("02:56");
+		teamWhoseTurnItIsTV.setText("Team Name");
+		turnNumberTV.setText("Turn\n" + teamDetails.getTurnNumber());
+		reRollsTV.setText("Re-Rolls\nN/A");
+		TimerTV.setText("Timer:\nN/A");
 	}
 
 	@Override
@@ -88,8 +89,35 @@ public class InGameActivity extends Activity
 					PickUpEvent koe = new PickUpEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 				}
 			});
+		blockButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				BlockEvent koe = new BlockEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
+			}
+		});
+		endTurnButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				//change the teamName at the top
+				if (teamDetails.isTeamOneFirstToMove) {
+					if (teamWhoseTurnItIsTV.getText().toString().equalsIgnoreCase(teamDetails.teamOneName))
+						teamWhoseTurnItIsTV.setText(teamDetails.teamTwoName);
+					else{
+						teamWhoseTurnItIsTV.setText(teamDetails.teamOneName);
+						teamDetails.setTurnNumber(teamDetails.getTurnNumber()+1);
+						turnNumberTV.setText("Turn\n" + teamDetails.getTurnNumber());
+					}
+				} else{
+					if (teamWhoseTurnItIsTV.getText().toString().equalsIgnoreCase(teamDetails.teamTwoName))
+						teamWhoseTurnItIsTV.setText(teamDetails.teamOneName);
+					else{
+						teamWhoseTurnItIsTV.setText(teamDetails.teamTwoName);
+						teamDetails.setTurnNumber(teamDetails.getTurnNumber()+1);
+						turnNumberTV.setText("Turn\n" + teamDetails.getTurnNumber());
+					}
+				}
+			}
+		});
 
-
+		turnNumberTV.setText("Turn\n"+teamDetails.getTurnNumber());
 	}
 	private void tidyUpLayout(){
 		endTurnButton.post(new Runnable() {

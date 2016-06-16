@@ -240,7 +240,7 @@ public class KickOffEvent
 				default:
 					output = output +"Bloody hell, something's gone wrong with the kickoff table at value " + kickOffType + ".";
 			}
-
+			tidyUp();
 			currentPanel = new gameEventPanel("Kick Off!", output, "OK", c,
 											  R.color.deepblue, R.color.white, R.color.bluegrey, R.color.black);
 			csqButtons = currentPanel.getButtons();

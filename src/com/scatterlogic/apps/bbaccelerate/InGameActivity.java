@@ -83,6 +83,11 @@ public class InGameActivity extends Activity
 					KickOffEvent koe = new KickOffEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
 				}
 			});
+		pickUpButton.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					PickUpEvent koe = new PickUpEvent(getApplicationContext(),actionLogPanel,buttonPanel,scroller,teamDetails);
+				}
+			});
 
 
 	}

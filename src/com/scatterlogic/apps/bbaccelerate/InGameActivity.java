@@ -95,7 +95,9 @@ public class InGameActivity extends Activity
 			}
 		});
 		endTurnButton.setOnClickListener(new View.OnClickListener() {
+
 			public void onClick(View v) {
+				tidyUpLayout();
 				//change the teamName at the top
 				if (teamDetails.isTeamOneFirstToMove) {
 					if (teamWhoseTurnItIsTV.getText().toString().equalsIgnoreCase(teamDetails.teamOneName))

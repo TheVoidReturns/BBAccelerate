@@ -252,7 +252,7 @@ public class KickOffEvent
 							Button castIn = (Button) v;
 							buttonPanel.removeAllViews();
 							tidyUp();
-							//TransferGoldFromTreasuryToPettyCash();
+							scatterKick();
 						}
 					});
 			}
@@ -260,6 +260,26 @@ public class KickOffEvent
 			tidyUp();
 		}
 	}
+	public void scatterKick(){
+
+        currentPanel = new gameEventPanel("Kick!","Scatter The Kick" ,"OK", c,
+										  R.color.deepgreen, R.color.white, R.color.bluegrey, R.color.black);
+        csqButtons = currentPanel.getButtons();
+        for (i = 0; i < csqButtons.length; i++) {
+            buttonPanel.addView(csqButtons[i]);
+
+            csqButtons[i].setOnClickListener(new View.OnClickListener() {
+					public void onClick(View v) {
+						Button castIn = (Button) v;
+						buttonPanel.removeAllViews();
+						tidyUp();
+						//TakeInducements();
+					}
+				});
+        }
+        actionLogPanel.addView(currentPanel.getPanel());
+        tidyUp();
+    }
 	public void tidyUp(){
 		s.post(new Runnable() {
 			@Override

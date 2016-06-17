@@ -19,6 +19,21 @@ public class PickUpEvent
 	int i;
 	TeamDetails teamDetails;
 
+	public PickUpEvent(LinearLayout actionLogPanel, LinearLayout buttonPanel, Context c, ScrollView s, gameEventPanel currentPanel, Thread backgroundThread, int nextNumberToAction, List<gameEventPanel> allPanels, Button[] csqButtons, int i, TeamDetails teamDetails)
+	{
+		this.actionLogPanel = actionLogPanel;
+		this.buttonPanel = buttonPanel;
+		this.c = c;
+		this.s = s;
+		this.currentPanel = currentPanel;
+		this.backgroundThread = backgroundThread;
+		this.nextNumberToAction = nextNumberToAction;
+		this.allPanels = allPanels;
+		this.csqButtons = csqButtons;
+		this.i = i;
+		this.teamDetails = teamDetails;
+	}
+
 	public PickUpEvent(Context context, LinearLayout alPanel, LinearLayout bPanel, ScrollView scrollView,TeamDetails tDetails) {
         actionLogPanel = alPanel;
         buttonPanel = bPanel;
